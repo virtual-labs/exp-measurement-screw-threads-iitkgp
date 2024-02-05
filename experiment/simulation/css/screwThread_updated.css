@@ -1,0 +1,148 @@
+
+
+
+
+.img-container{	
+	position:relative;
+	display:inline-block;	
+}
+
+
+
+
+#screwThread{
+
+    /* left: 5%;
+    top: 91.5%;
+    width: 10%; */
+    z-index: 2;
+}
+#screwThread2{
+visibility:hidden;
+position: absolute;
+left: 25%;
+top: 59.5%;
+width: 23%;
+z-index: 2;
+}
+#twoWire{
+visibility:hidden;
+   /*  left: 45%;
+    top: 88.5%;
+    width: 18%; */
+    z-index: 2;
+    /* transform: rotate(349deg);*/
+}
+
+#oneWire{
+visibility:visible;
+   /*  left: 74%;
+    top: 87.5%;
+    width: 18%; */
+    z-index: 2;
+    /* transform: rotate(349deg);*/
+}
+
+#sTtext{
+
+    /* top: 123.5%; */
+    /* font-size: 1vw; */
+    color: blue;
+}
+#twowireT{
+visibility:hidden;
+   /*  left: 49%;
+    top: 116.5%; */
+    color: blue;
+}
+
+#onewireT{
+
+   /*  left: 78%;
+    top: 115.5%; */
+    color: blue;
+}
+
+#sideWire1{
+	display:none;
+position: absolute;
+    left: 21%;
+    top: 49.5%;
+	z-index:1;
+}
+#sideWire2{
+	display:none;
+position: absolute;
+    left: 55%;
+    top: 49.5%;
+	z-index:2;
+}
+
+#rotategear{	
+position: absolute;
+    left: 70%;
+    top: 69.2%;
+}
+
+/*------index2.html-----*/
+
+#fmfixed{
+position: absolute;
+    width: 35%;
+    right: 52%;
+    top: 24.2%;
+    z-index: 1;
+}
+
+#fmls{
+position: absolute;
+width: 78%;
+height: 22%;
+right: -77%;
+top: 70.7%;
+z-index: 2;
+}
+#fmmv{
+position: absolute;
+width: 11%;
+height: 29%;
+right: 24%;
+top: 65.7%;
+z-index: 1;
+}
+#cscale{
+position: absolute;
+width: 82%;
+height: 32%;
+right: -102.8%;
+top: 64.8%;
+z-index: 4;
+}
+#ratchet{
+position: absolute;
+    width: 40%;
+    height: 26%;
+    right: -146%;
+    top: 66%;
+    z-index: 3;
+}
+#gatis{
+position: absolute;
+    width: 4%;
+    height: 32%;
+    right: -106%;
+    top: 64%;
+    z-index: 3;
+}
+/*-common part--*/
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}  
+tr:nth-child(odd) {
+  background-color: #F0FBCC;
+} 
