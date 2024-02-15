@@ -1,0 +1,60 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Primary purpose of measuring screw thread parameters using the two-wire method is ",
+      "answers": {
+        "a": "To determine the thread pitch",
+        "b": "To calculate the thread angle",
+        "c": "To measure the major diameter",
+        "d": "To find the pitch diameter"
+      },
+      "correctAnswer": "d",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "In two-wire or three-wire method, the wires are placed",
+      "answers": {
+        "a": "Parallel to the thread axis",
+        "b": "Perpendicular to the thread axis",
+        "c": "Tangent to the thread profile",
+        "d": "Radially across the thread"
+      },
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Three wire method is used to measure",
+      "answers": {
+        "a": "Major diameter",
+        "b": "Minor diameter",
+        "c": "Effective diameter",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Which method is generally more accurate for measuring threads with a 60 &deg; thread angle?",
+      "answers": {
+        "a": "Two-wire method",
+        "b": "Three-wire method",
+        "c": "Both methods are equally accurate",
+        "d": "Neither method is accurate for 60 &deg; thread angles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Which method is less sensitive to errors caused by variations in thread angle?",
+      "answers": {
+        "a": "Two-wire Method",
+        "b": "Three-wire method",
+        "c": "Both methods are equally sensitive",
+        "d": "Neither method is sensitive to thread angle variations"
+      },
+      "correctAnswer": "a",
+      "difficulty": "Beginner"
+    }
+  ]
+}

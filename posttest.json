@@ -1,0 +1,60 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Angle of thread (&alpha;), in metric thread is:",
+      "answers": {
+        "a": "45 &deg;",
+        "b": "30 &deg;",
+        "c": "60 &deg;",
+        "d": "20 &deg;"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The value of the (T) dimension underwire, can be calculated using the expression ",
+      "answers": {
+        "a": "2E - d",
+        "b": "M - 2d",
+        "c": "E - 2d",
+        "d": "2M- d"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The expression (E) of effective diameter using three-wire method:",
+      "answers": {
+        "a": "p/2 cot (&alpha;/2)",
+        "b": "T + P",
+        "c": "M - d [1+cosec (&alpha;/2)] + p/2 cot (&alpha;/2)",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How are the wires arranged in the three-wire method?",
+      "answers": {
+        "a": "Linearly along one side of the thread",
+        "b": "In an Equilateral triangle formation",
+        "c": "In spiral formatione",
+        "d": "Randomly distributed"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Determine the pitch of screw if distance across 10 threads measured using scale is 15 mm.",
+      "answers": {
+        "a": "0.75 mm",
+        "b": "1.25 mm",
+        "c": "1.5 mm",
+        "d": "0.25 mm"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
