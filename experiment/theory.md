@@ -39,7 +39,7 @@ M = distance over the wire, measured using a suitable micrometer.
 
 Effective diameter ( E ) = T + P
 
-Where T is the dimension under the wire, and P is the correction factor.
+Where T is the dimension under the wire till the point of contact between wire and screw flank, and P is the correction factor
 
 And, T = M - 2d
 
