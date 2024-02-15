@@ -1,10 +1,10 @@
 ## Theory
 
-Screw threads are commonly used in mechanical assemblies to provide secure connections and transmit force. Accurate measurement of their key parameters, including major diameter, is crucial for ensuring proper functioning and quality control.
+Screw threads are commonly used in mechanical assemblies to provide secure connections and transmit force. Accurate measurement of their key parameters, including major diameter, is crucial for ensuring proper functioning and transmission of load.
 
 **Two-wire method:**
 
-The two-wire and three-wire methods utilize two and three wires of equal diameter placed tangentially on opposite flanks of the screw thread. The distance between the wires is measured using a micrometer. The wire diameter and pitch of the thread, the effective diameter (E), can be calculated. Figure 1 below represents the two-wire technique.
+The two-wire method utilizes two wires of equal diameter placed tangentially on opposite flanks of the screw thread. The distance between the wires is measured using a micrometer. The wire diameter, pitch of the thread, and the effective diameter (E) can be calculated. Figure 1 below represents the two-wire technique.
 
 
 <div align="center">

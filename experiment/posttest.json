@@ -9,7 +9,7 @@
         "c": "60 &deg;",
         "d": "20 &deg;"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
@@ -18,7 +18,7 @@
         "a": "2E - d",
         "b": "M - 2d",
         "c": "E - 2d",
-        "d": "M- 2d"
+        "d": "2M- d"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
