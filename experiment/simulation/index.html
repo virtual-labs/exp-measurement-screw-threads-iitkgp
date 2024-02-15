@@ -83,25 +83,35 @@
               <div id="inst" style="display:none">
 			  <ol>
                       
-					  <li> First click on 'Two-wire' under 'Experiment Parts'. Click on the one wire for two times to place the two wires on
-					  the measuring faces of micrometer spindle and anvil.</li><br/>
+					  <li> First click on 'Two-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d, 
+					  1.25 mm as the pitch of thread p and 25.08 mm as the distance between the outer surfaces of the two wires M from the
+					  respective dropdowns.</li><br/>					  
+					  
+					  <li>Click on the one wire for two times to place the two wires on the measuring faces of micrometer spindle and anvil.</li><br/>
 					 
 					 <li>Click on the screw thread specimen to place it in between the two wires on the measuring faces of micrometer spindle and anvil.
 					 Click on the left side arrow key on the 'Rotate Micrometer' button. Wait until the circular scale of the micrometer stops rotating. Again click on the same arrow key
-					 . Click it until the screw thread is properly fixed between the wires. One alert message will be shown when it is properly fixed. 
+					 . Click it until the screw thread is properly fixed between the wires. After a ratchet wrench sound one alert message will be shown when it is properly fixed. 
 					 </li></br>
 					 
-					 <li>Click on 'Calculate' button to find out the values of the distance between the outer surfaces of the two wires ( M (mm))
-					 and the effective diameter ( E (mm)). Click on the right side arrow key on the 'Rotate Micrometer' button two to three times
+					 <li>Click on 'Calculate' button to find out the value of the effective diameter ( E (mm)). Click on the right side arrow key on the 'Rotate Micrometer' button two to three times
 					to move the micrometer spindle from fixed position.</li><br/>
 
-					 <li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.</li><br/> 
+					 <li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.
+					 Follow steps 1-4 by selecting 0.866 mm as the value of wire diameter d, 1.5 mm as the pitch of thread p and 26.58 mm as the distance between the outer surfaces of the two wires M from the
+					  respective dropdowns. Click on 'Clear' button.</li><br/> 
 					 
-					 <li>Now click on 'Three-wire' under 'Experiment Parts'. Click on the one wire and two wire to place them on
-					  the measuring faces of micrometer spindle and anvil.</li><br/>
+					 <li>Now click on 'Three-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d, 
+					  1.25 mm as the pitch of thread p and 25.08 mm as the distance between the outer surfaces of the two wires M from the
+					  respective dropdowns.</li><br/>
+					  
+					  <li>Click on the one wire and two wire to place them on the measuring faces of micrometer spindle and anvil.</li><br/>
 						
-					<li>Follow steps 2-4 to measure the distance between the outer surfaces of the three wires ( M (mm)), the effective diameter ( E (mm)).
-					and the value of H ( height of the threads in mm ). </li><br/>
+					<li>Follow steps 4-5 to measure the effective diameter ( E (mm)) and the value of H ( height of the threads in mm ). </li><br/>
+					
+					<li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.
+					 Follow steps 7-9 by selecting 0.866 mm as the value of wire diameter d, 1.5 mm as the pitch of thread p and 26.58 mm as the distance between the outer surfaces of the two wires M from the
+					  respective dropdowns. Click on 'Clear' button.</li><br/> 
 
 					 
 					<br/><br/>
@@ -155,15 +165,45 @@
 			<div class="card" style=" width:100%;background-color:pink" > 
 			
 			<div class="card-body">
-			<span class="card-title bg-light"> Measurement of the effective diameter E</span><br/>			
-			<span class="card-text" >The distance between the outer surfaces of the two wires ( M (mm)):&nbsp;<input  type="number" id="M" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
+			<span class="card-title bg-light"> Measurement of the effective diameter E</span><br/><br/>
+
+			<span class="card-text" >Choose the wire diameter d ( mm ):&nbsp;
+			<select class="card-text" id="d" style="width:10%;text-align:center">
+			  <option>0.722</option>
+			  <option>0.866</option>
+			</select>			
+			</span><br/><br/>
+
+
+			<span class="card-text" >Choose the pitch of thread p ( mm ):&nbsp;
+			<select class="card-text" id="p" style="width:10%;text-align:center">
+			  <option>1.25</option>
+			  <option>1.5</option>
+			</select>			
+			</span><br/><br/>
+
+
+			
+			<span class="card-text" >Choose the distance between the outer surfaces of the two wires M ( mm ):&nbsp;
+			<select class="card-text" id="M" style="width:10%;text-align:center">
+			  <option>25.08</option>
+			  <option>26.58</option>
+			</select>			
+			</span><br/><br/>
+						
 			<span class="card-text">The effective diameter ( E (mm)):&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
 			<span class="card-text" id="HT" style="display:none">The effective diameter ( H (mm)):&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
 			<button  type="button"   id="calcbtn" class="btn btn-success " onclick="calculate()" disabled="true">Calculate</button>
 			<button  type="button" class="btn btn-danger " onclick="Refresh()" >Clear</button>
 			</div></div></div>
 			
-			<div class="col-md-1"></div>
+			<div class="col-md-1">
+			<audio id="myAudio">
+			  <source src="Ratchet Wrench - Sound Effect.mp3" type="audio/mpeg">
+			</audio>
+			
+			
+			</div>
 			
 			</div>
 			
@@ -183,6 +223,17 @@
 			<img id="screwThread2" src="./images/screwthread.png" onclick="moveThread()" >
 			<img id="sideWire1" src="./images/sidewire.png" onclick = "">
 			<img id="sideWire2" src="./images/sidewire.png" onclick = "">
+			
+			<img id="oneWire4" src="./images/onewire.png">
+			<img id="oneWire3" src="./images/onewire.png">
+			<img id="oneWire2" src="./images/onewire.png">
+			
+			<img id="twoWire4" src="./images/twowire.png">
+			<img id="twoWire3" src="./images/twowire.png">
+			
+			<img id="scruthrd2" src="./images/screwthread.png">
+			<img id="scruthrd3" src="./images/screwthread.png">
+			<img id="scruthrd4" src="./images/screwthread.png">
 			
 			</div>	
 			<input type="number" id="movechk" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">

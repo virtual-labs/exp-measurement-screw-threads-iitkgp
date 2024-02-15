@@ -64,6 +64,77 @@ document.getElementById('onewireT').style.visibility = "visible";
 
 }
 
+//////animation for two-wire//////
+function wire1_transition(){
+
+setTimeout(function(){	
+$('#oneWire2').css('visibility','visible');
+	
+ },500);	
+ 
+ setTimeout(function(){	
+$('#oneWire3').css('visibility','visible');	
+$('#oneWire2').css('visibility','hidden');
+ },800);	
+ 
+ setTimeout(function(){	
+$('#oneWire4').css('visibility','visible');
+$('#oneWire3').css('visibility','hidden');	
+ },1000);
+
+setTimeout(function(){	
+$('#oneWire2').css('visibility','hidden');	
+$('#oneWire3').css('visibility','hidden');
+$('#oneWire4').css('visibility','hidden');
+ },1200);	 
+	
+}
+
+//////animation for three-wire//////
+function wire2_transition(){
+
+setTimeout(function(){	
+$('#twoWire3').css('visibility','visible');
+$('#twoWire').css('visibility','hidden');
+ },500);	
+ 
+ setTimeout(function(){	
+$('#twoWire4').css('visibility','visible');	
+$('#twoWire3').css('visibility','hidden');
+ },800);	
+
+setTimeout(function(){	
+$('#twoWire').css('visibility','hidden');	
+$('#twoWire3').css('visibility','hidden');
+$('#twoWire4').css('visibility','hidden');
+ },1000);	 
+	
+}
+
+//////animation for screw thread//////
+function scru_transition(){
+
+setTimeout(function(){	
+$('#scruthrd2').css('visibility','visible');
+$('#screwThread').css('visibility','hidden');
+ },500);
+
+setTimeout(function(){	
+$('#scruthrd3').css('visibility','visible');	
+$('#scruthrd2').css('visibility','hidden');
+ },800); 
+ 
+ setTimeout(function(){	
+$('#scruthrd4').css('visibility','visible');	
+$('#scruthrd3').css('visibility','hidden');
+ },1000);
+
+setTimeout(function(){	
+$('#scruthrd4').css('visibility','hidden');	
+ },1200); 
+
+
+}
 ///show side wire
 var sideCount =0;
 function side1(){
@@ -72,34 +143,45 @@ sideCount++;
 
 if(document.getElementById('seudobox').value == 1){
 if(sideCount == 1){
+	wire1_transition();
+	setTimeout(function(){	
 	document.getElementById('sideWire1').style.display = "block";
-	
+	 },1200);	
 }	
 if(sideCount == 2){
+	wire1_transition();
+	setTimeout(function(){
 	document.getElementById('sideWire2').style.display = "block";
 	document.getElementById('oneWire').style.visibility = "hidden";
 	document.getElementById('onewireT').style.visibility = "hidden";
+	 },1200);
 }	
 	
 }
 
 else if(document.getElementById('seudobox').value == 2){
-
+	
+	wire1_transition();
+	setTimeout(function(){
 	document.getElementById('sideWire1').style.display = "block";
 	document.getElementById('oneWire').style.visibility = "hidden";
 	document.getElementById('onewireT').style.visibility = "hidden";
+	 },1200);
 	
 }
 
 }
 
 function side2(){
-	
+
+
 if(document.getElementById('seudobox').value == 2){
-	
+	wire2_transition();	
+setTimeout(function(){	
 document.getElementById('sideWire2').style.display = "block";
 document.getElementById('twoWire').style.visibility = "hidden";
-document.getElementById('twowireT').style.visibility = "hidden";	
+document.getElementById('twowireT').style.visibility = "hidden";
+},1000);	
 }		
 	
 }
@@ -110,12 +192,15 @@ function moveThread(){
 	var movebox = document.getElementById('movechk').value;
 		
 	if(movebox == 1){
+	scru_transition();
+setTimeout(function(){	
 document.getElementById('screwThread').style.visibility = "hidden";
 document.getElementById('screwThread2').style.visibility = "visible";
 document.getElementById('sTtext').style.visibility = "hidden";
 //document.getElementById('screwThread').style.left = 22 + "%";
 //document.getElementById('screwThread').style.top = 44.5 + "%";
 document.getElementById('movechk').value = 2;
+ },1200);
 }
 if(movebox == 2){	
 document.getElementById('screwThread').style.visibility = "visible";
@@ -232,6 +317,10 @@ document.getElementById('gatis').style.width = newgw + "%";
 	document.getElementById('sideWire2').style.left = newWirePos + "%";
 	if(newPos == 26 && document.getElementById('movechk').value == 2){
 	
+	var sound = document.getElementById("myAudio"); 
+ 
+	  sound.play(); 
+	
 	alert('fixed properly');
 	/* counterscru = undefined;
 	posCount = undefined;
@@ -283,11 +372,11 @@ document.getElementById('gatis').style.width = newgw + "%";
  var M,E;
  function Math_model1(){///two-wire method
 	 
-	 var d = 0.722;///diameter in mm of the wire
-	 var p = 1.25;///pitch of the thread in mm
+	 var d = $('#d').val();//0.722;///diameter in mm of the wire
+	 var p = $('#p').val();//1.25;///pitch of the thread in mm
 	 var alpha = 60;///thread angle
 	 
-	  M = 25.08;//math.add(25.08, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
+	  M = $('#M').val();//25.08;//math.add(25.08, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
 	
 	 
 	 var T = math.subtract(M,math.multiply(2,d));///the dimension under the wire
@@ -321,12 +410,12 @@ document.getElementById('gatis').style.width = newgw + "%";
  
  function Math_model2(){///three-wire method
 	 
-	 var d = 0.722;///diameter in mm of the wire
-	 var p = 1.25;///pitch of the thread in mm
+	 var d = $('#d').val();//0.722;///diameter in mm of the wire
+	 var p = $('#p').val();//1.25;///pitch of the thread in mm
 	 var alpha = 60;///thread angle
 	 var H = math.multiply(math.divide(p,2),math.cot(math.multiply(math.divide(alpha,2),math.divide(math.pi,180))));///Height of threads 
 	 
-	  M = 25.008;//math.add(25.088, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
+	  M = $('#M').val();//25.008;//math.add(25.088, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
 	var p1 = M;
 	var p2 = math.multiply(d,math.add(1,math.csc(math.multiply(math.divide(alpha,2),math.divide(math.pi,180)))));
 	var p3 = H;
@@ -350,6 +439,7 @@ function Refresh(){///donot keep the name of the function as clear
 document.getElementById('sideWire1').style.display = "none";
 document.getElementById('sideWire2').style.display = "none";
 
+sideCount = 0;
 document.getElementById('oneWire').style.visibility = "visible";
 //document.getElementById('twoWire').style.visibility = "visible";
 document.getElementById('onewireT').style.visibility = "visible";
