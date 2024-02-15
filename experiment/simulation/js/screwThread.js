@@ -367,16 +367,44 @@ document.getElementById('gatis').style.width = newgw + "%";
 	
  }
  
+ function pValueChange(select){
+	 
+	 var sv = document.getElementById('d').selectedIndex;
+	 var sValue = document.getElementById('d').options[sv].innerHTML;
+	 
+	 if(sValue == 0.722){
+		 $('#p').val(1.25);
+	 }
+	 if(sValue == 0.866){
+		// $('#p').val(1.5);
+		 document.getElementById('p').value = 1.5;
+	 }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
  /////////////////////Effective diameter count////////////////////////////////////////////
  var M,E;
  function Math_model1(){///two-wire method
 	 
 	 var d = $('#d').val();//0.722;///diameter in mm of the wire
-	 var p = $('#p').val();//1.25;///pitch of the thread in mm
+	 
+	 if(d == 0.722){
+	 var p = 1.25;//$('#p').val();//1.25;///pitch of the thread in mm
+	 M = 25.08;
+	 }
+	 if(d == 0.866){
+	 var p = 1.5;//$('#p').val();//1.25;///pitch of the thread in mm
+	 M = 26.58;
+	 }
 	 var alpha = 60;///thread angle
 	 
-	  M = $('#M').val();//25.08;//math.add(25.08, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
+	  //M = $('#M').val();//25.08;//math.add(25.08, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
 	
 	 
 	 var T = math.subtract(M,math.multiply(2,d));///the dimension under the wire
@@ -402,6 +430,7 @@ document.getElementById('gatis').style.width = newgw + "%";
 	console.log('T =' + T);
 	console.log('P =' + P_factor);
 	
+	//$('#p').val(p);
 	$('#M').val(M);
 	$('#E').val(E);
 	
@@ -410,21 +439,31 @@ document.getElementById('gatis').style.width = newgw + "%";
  
  function Math_model2(){///three-wire method
 	 
-	 var d = $('#d').val();//0.722;///diameter in mm of the wire
-	 var p = $('#p').val();//1.25;///pitch of the thread in mm
+	  var d = $('#d').val();//0.722;///diameter in mm of the wire
+	 
+	 if(d == 0.722){
+	 var p = 1.25;//$('#p').val();//1.25;///pitch of the thread in mm
+	 M = 25.088;
+	 }
+	 if(d == 0.866){
+	 var p = 1.5;//$('#p').val();//1.25;///pitch of the thread in mm
+	 M = 26.58;
+	 }
+	 //var p = $('#p').val();//1.25;///pitch of the thread in mm
 	 var alpha = 60;///thread angle
 	 var H = math.multiply(math.divide(p,2),math.cot(math.multiply(math.divide(alpha,2),math.divide(math.pi,180))));///Height of threads 
 	 
-	  M = $('#M').val();//25.008;//math.add(25.088, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
+	  //M = $('#M').val();//25.008;//math.add(25.088, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
 	var p1 = M;
 	var p2 = math.multiply(d,math.add(1,math.csc(math.multiply(math.divide(alpha,2),math.divide(math.pi,180)))));
 	var p3 = H;
 	
-     E = math.add(math.subtract(p1,p2),p3);
+     E = math.subtract(p1,math.subtract(p2,p3));
 	 
 	console.log('E =' + E);
 	console.log('H =' + H);
 	
+	//$('#p').val(p);
 	$('#M').val(M);
 	$('#E').val(E);
 	$('#H').val(H);

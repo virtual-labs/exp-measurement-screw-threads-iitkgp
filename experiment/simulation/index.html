@@ -83,9 +83,8 @@
               <div id="inst" style="display:none">
 			  <ol>
                       
-					  <li> First click on 'Two-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d, 
-					  1.25 mm as the pitch of thread p and 25.08 mm as the distance between the outer surfaces of the two wires M from the
-					  respective dropdowns.</li><br/>					  
+					  <li> First click on 'Two-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d from the
+					  given dropdown. The value of pitch of thread p is 1.25 mm.</li><br/>					  
 					  
 					  <li>Click on the one wire for two times to place the two wires on the measuring faces of micrometer spindle and anvil.</li><br/>
 					 
@@ -94,24 +93,25 @@
 					 . Click it until the screw thread is properly fixed between the wires. After a ratchet wrench sound one alert message will be shown when it is properly fixed. 
 					 </li></br>
 					 
-					 <li>Click on 'Calculate' button to find out the value of the effective diameter ( E (mm)). Click on the right side arrow key on the 'Rotate Micrometer' button two to three times
+					 <li>Click on 'Calculate' button to find out the value of the effective diameter ( E (mm)) and 
+					 the distance between the outer surfaces of the two wires M ( mm ). Click on the right side arrow key on the 'Rotate Micrometer' button two to three times
 					to move the micrometer spindle from fixed position.</li><br/>
 
 					 <li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.
-					 Follow steps 1-4 by selecting 0.866 mm as the value of wire diameter d, 1.5 mm as the pitch of thread p and 26.58 mm as the distance between the outer surfaces of the two wires M from the
-					  respective dropdowns. Click on 'Clear' button.</li><br/> 
+					 Follow steps 2-4 by selecting 0.866 mm as the value of wire diameter d from the given dropdown.
+					 The value of pitch of thread p is 1.5 mm. Click on 'Clear' button.</li><br/> 
 					 
-					 <li>Now click on 'Three-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d, 
-					  1.25 mm as the pitch of thread p and 25.08 mm as the distance between the outer surfaces of the two wires M from the
-					  respective dropdowns.</li><br/>
+					 <li>Now click on 'Three-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d from the
+					  given dropdown. The value of pitch of thread p is 1.25 mm.</li><br/>
 					  
 					  <li>Click on the one wire and two wire to place them on the measuring faces of micrometer spindle and anvil.</li><br/>
 						
-					<li>Follow steps 4-5 to measure the effective diameter ( E (mm)) and the value of H ( height of the threads in mm ). </li><br/>
+					<li>Follow steps 3-4 to measure the effective diameter ( E (mm)), the distance between the outer surfaces of the two wires M
+					( mm ) and the value of H ( height of the threads in mm ). </li><br/>
 					
 					<li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.
-					 Follow steps 7-9 by selecting 0.866 mm as the value of wire diameter d, 1.5 mm as the pitch of thread p and 26.58 mm as the distance between the outer surfaces of the two wires M from the
-					  respective dropdowns. Click on 'Clear' button.</li><br/> 
+					 Follow steps 7-9 by selecting 0.866 mm as the value of wire diameter d from the
+					  given dropdown. The value of pitch of thread p is 1.5 mm. Click on 'Clear' button.</li><br/> 
 
 					 
 					<br/><br/>
@@ -168,27 +168,29 @@
 			<span class="card-title bg-light"> Measurement of the effective diameter E</span><br/><br/>
 
 			<span class="card-text" >Choose the wire diameter d ( mm ):&nbsp;
-			<select class="card-text" id="d" style="width:10%;text-align:center">
-			  <option>0.722</option>
-			  <option>0.866</option>
+			<select class="card-text" id="d" style="width:10%;text-align:center" onclick="pValueChange(this)">
+			  <option >0.722</option>
+			  <option >0.866</option>
 			</select>			
 			</span><br/><br/>
 
 
 			<span class="card-text" >Choose the pitch of thread p ( mm ):&nbsp;
-			<select class="card-text" id="p" style="width:10%;text-align:center">
+			<input id="p" style="width:30%;text-align:center" value="1.25" readonly=readonly>
+			<!-- <select class="card-text" id="p" style="width:10%;text-align:center">
 			  <option>1.25</option>
 			  <option>1.5</option>
-			</select>			
+			</select> -->			
 			</span><br/><br/>
 
 
 			
-			<span class="card-text" >Choose the distance between the outer surfaces of the two wires M ( mm ):&nbsp;
-			<select class="card-text" id="M" style="width:10%;text-align:center">
+			<span class="card-text" >The distance between the outer surfaces of the two wires M ( mm ):&nbsp;
+			<input id="M" style="width:30%;text-align:center" value="0" readonly=readonly>
+			<!-- <select class="card-text" id="M" style="width:10%;text-align:center">
 			  <option>25.08</option>
 			  <option>26.58</option>
-			</select>			
+			</select> -->			
 			</span><br/><br/>
 						
 			<span class="card-text">The effective diameter ( E (mm)):&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
