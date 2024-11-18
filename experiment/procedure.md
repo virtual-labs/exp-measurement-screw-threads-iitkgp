@@ -5,14 +5,14 @@
 <img class="img-fluid"  src="./images/conn.png" alt=""><br> 
 Figure 1. Gear tooth vernier caliper with spur gear          
 </div> -->
-
+**Steps to perform the simulation**
 
 1. First click on 'Two-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d from the
 given dropdown. The value of pitch of thread p is 1.25 mm.
 
 <div align="center">
 <img class="img-fluid"  src="./images/simu.png" alt=""><br> 
-Figure 1. Measurement of Screw Threads Parameters Simulation model          
+**Figure 1. Measurement of Screw Threads Parameters Simulation model**          
 </div>     
 
 2. Click on the one wire for two times to place the two wires on the measuring faces of micrometer spindle and anvil.
