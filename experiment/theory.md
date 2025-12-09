@@ -9,7 +9,7 @@ The two-wire method utilizes two wires of equal diameter placed tangentially on 
 <div align="center">
 <img src="images/figure1.png" class="img-fluid">
 
-<b>>Fig. 1. (a) Schematic of Micrometer (b) Two-wire technique</b>
+<b>Fig. 1. (a) Schematic of Micrometer (b) Two-wire technique</b>
 </div>
 
 **Three-wire Method:**
@@ -19,7 +19,7 @@ The three-wire method is a more accurate and less sensitive technique for metric
 <div align="center">
 <img src="images/figure2.png" class="img-fluid">
 
-<b>>Fig.2. (a) Schematic of Micrometer (b) Three-wire technique</b>>
+<b>Fig.2. (a) Schematic of Micrometer (b) Three-wire technique</b>>
 </div>
 
 **Calculation:**
@@ -31,7 +31,7 @@ Metric thread is used in this experiment having thread angle (<span style="font-
 <div align="center">
 <img src="images/figure3.png" class="img-fluid">
 
-<b>>Fig. 3 Two-wire measurement</b> 
+<b>Fig. 3 Two-wire measurement</b> 
 </div>
 
 <span style="font-family:'Bodoni MT';font-style:italic">M</span> = distance over the wire, measured using a suitable micrometer.
