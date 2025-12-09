@@ -29,13 +29,15 @@ $(document).ready(function(){
 function seudovalue1(){
 	
 $('#seudobox').val(1);	
-$('#HT').css('display','none');	
+$('#HT').css('visibility','hidden');	
+$('#H').css('visibility','hidden');
 }
 
 function seudovalue2(){
 	
 $('#seudobox').val(2);	
-$('#HT').css('display','block');	
+$('#HT').css('visibility','visible');
+$('#H').css('visibility','visible');
 }
 
 ///method selection
@@ -64,9 +66,34 @@ document.getElementById('onewireT').style.visibility = "visible";
 
 }
 
-//////animation for two-wire//////
-function wire1_transition(){
+//////animation for two-wire left side wire//////
+function wire1_transitionL(){
+document.getElementById('oneWire').classList.add('rotateWireR1');
+setTimeout(function(){	
+$('#oneWire2').css('visibility','visible');
+	
+ },2200);	
+ 
+ setTimeout(function(){	
+$('#oneWire3').css('visibility','visible');	
+$('#oneWire2').css('visibility','hidden');
+ },2500);	
+ 
+ setTimeout(function(){	
+$('#oneWire4').css('visibility','visible');
+$('#oneWire3').css('visibility','hidden');	
+ },2800);
 
+setTimeout(function(){	
+$('#oneWire2').css('visibility','hidden');	
+$('#oneWire3').css('visibility','hidden');
+$('#oneWire4').css('visibility','hidden');
+ },3000);	 
+	
+}
+//////animation for two-wire right side wire//////
+function wire1_transitionR(){
+//document.getElementById('oneWire').classList.add('rotateWireR1');
 setTimeout(function(){	
 $('#oneWire2').css('visibility','visible');
 	
@@ -80,34 +107,34 @@ $('#oneWire2').css('visibility','hidden');
  setTimeout(function(){	
 $('#oneWire4').css('visibility','visible');
 $('#oneWire3').css('visibility','hidden');	
- },1000);
+ },900);
 
 setTimeout(function(){	
 $('#oneWire2').css('visibility','hidden');	
 $('#oneWire3').css('visibility','hidden');
 $('#oneWire4').css('visibility','hidden');
- },1200);	 
+ },1000);	 
 	
 }
 
 //////animation for three-wire//////
 function wire2_transition(){
-
+document.getElementById('twoWire').classList.add('rotateWireR1');
 setTimeout(function(){	
 $('#twoWire3').css('visibility','visible');
 $('#twoWire').css('visibility','hidden');
- },500);	
+ },2200);	
  
  setTimeout(function(){	
 $('#twoWire4').css('visibility','visible');	
 $('#twoWire3').css('visibility','hidden');
- },800);	
+ },2500);	
 
 setTimeout(function(){	
 $('#twoWire').css('visibility','hidden');	
 $('#twoWire3').css('visibility','hidden');
 $('#twoWire4').css('visibility','hidden');
- },1000);	 
+ },2800);	 
 	
 }
 
@@ -141,32 +168,33 @@ function side1(){
 	
 sideCount++;
 
-if(document.getElementById('seudobox').value == 1){
+if(document.getElementById('seudobox').value == 1){///Two-wire method
 if(sideCount == 1){
-	wire1_transition();
+	wire1_transitionL();
 	setTimeout(function(){	
 	document.getElementById('sideWire1').style.display = "block";
-	 },1200);	
+	 },3100);	
 }	
 if(sideCount == 2){
-	wire1_transition();
+	wire1_transitionR();
 	setTimeout(function(){
 	document.getElementById('sideWire2').style.display = "block";
+	document.getElementById('sideWire2').src = "./images/onewireR.png";
 	document.getElementById('oneWire').style.visibility = "hidden";
 	document.getElementById('onewireT').style.visibility = "hidden";
-	 },1200);
+	 },1000);
 }	
 	
 }
 
-else if(document.getElementById('seudobox').value == 2){
+else if(document.getElementById('seudobox').value == 2){///Three wire method
 	
-	wire1_transition();
+	wire1_transitionL();
 	setTimeout(function(){
 	document.getElementById('sideWire1').style.display = "block";
 	document.getElementById('oneWire').style.visibility = "hidden";
 	document.getElementById('onewireT').style.visibility = "hidden";
-	 },1200);
+	 },3100);
 	
 }
 
@@ -179,9 +207,10 @@ if(document.getElementById('seudobox').value == 2){
 	wire2_transition();	
 setTimeout(function(){	
 document.getElementById('sideWire2').style.display = "block";
+	document.getElementById('sideWire2').src = "./images/twowireR.png";
 document.getElementById('twoWire').style.visibility = "hidden";
 document.getElementById('twowireT').style.visibility = "hidden";
-},1000);	
+},2900);	
 }		
 	
 }
@@ -196,6 +225,7 @@ function moveThread(){
 setTimeout(function(){	
 document.getElementById('screwThread').style.visibility = "hidden";
 document.getElementById('screwThread2').style.visibility = "visible";
+document.getElementById('screwThread2').style.zIndex=-2;
 document.getElementById('sTtext').style.visibility = "hidden";
 //document.getElementById('screwThread').style.left = 22 + "%";
 //document.getElementById('screwThread').style.top = 44.5 + "%";
@@ -247,11 +277,19 @@ clearInterval(intervalrev);
 function rotategauge(){
 	
 	 interval = setInterval(cw,100);
+	 document.getElementById('g1').disabled=true;
+	 setTimeout(function() {
+   document.getElementById('g1').disabled=false;
+}, 1500);
 }
 
 function rotategaugerev(){
 	
 	 intervalrev = setInterval(acw,100);
+	 document.getElementById('g1').disabled=true;
+	 setTimeout(function() {
+   document.getElementById('g1').disabled=false;
+}, 1500);
 }
 
 ///incr the right position of gauge . with one complete revolution circular scale moves 1 mm forward
@@ -267,7 +305,7 @@ function cscalePosChng(){
 posCount+=1;///for 1 mm exact
 //posCount2+=1;
 
-gwCount+=0.4;
+gwCount+=1.5;
 //gwCount2+=0.4;
 
 var newPos = math.add(csPos,posCount);
@@ -287,7 +325,7 @@ function cscalePosChngRev(){
 	} */
 
 posCount-=1;///1.3;for 1 mm exact
-gwCount-= 0.4;
+gwCount-= 1.5;
 
 var newPos = math.add(csPos,posCount);
 var newgw = math.add(gw,gwCount);
@@ -302,7 +340,7 @@ document.getElementById('gatis').style.width = newgw + "%";
 
 /////////////////////////////////////////
  var screwwidth = 11;//6;
- var wirePos = 55;//32;
+ var wirePos = 50;//32;
  var counterscru = 0,counterscru2=0;
  function screw_widthincr(){
 	 
@@ -322,6 +360,18 @@ document.getElementById('gatis').style.width = newgw + "%";
 	  sound.play(); 
 	
 	alert('fixed properly');
+	if(document.getElementById('seudobox').value==1){
+	document.getElementById('twztext').style.display = "block";
+	document.getElementById('twz').style.display = "block";
+	document.getElementById('thwztext').style.display = "none";
+	document.getElementById('thwz').style.display = "none";
+	}
+	if(document.getElementById('seudobox').value==2){
+	document.getElementById('thwztext').style.display = "block";
+	document.getElementById('thwz').style.display = "block";
+	document.getElementById('twztext').style.display = "none";
+	document.getElementById('twz').style.display = "none";
+	}
 	/* counterscru = undefined;
 	posCount = undefined;
 	gwCount = undefined; */
@@ -356,7 +406,7 @@ document.getElementById('gatis').style.width = newgw + "%";
 	
 	if(newPos == 4){
 	
-	alert('Extere point');
+	alert('Exterem point');
 	document.getElementById('rbtnM').style['pointer-events'] = "none";
 }
 
@@ -379,13 +429,7 @@ document.getElementById('gatis').style.width = newgw + "%";
 		// $('#p').val(1.5);
 		 document.getElementById('p').value = 1.5;
 	 }
- }
- 
- 
- 
- 
- 
- 
+ } 
  
 
  /////////////////////Effective diameter count////////////////////////////////////////////
@@ -424,7 +468,7 @@ document.getElementById('gatis').style.width = newgw + "%";
 	console.log('p12 =' + p12);
 	console.log('p22 =' + p22);
 
-	 E = math.add(T,P_factor);
+	 E = math.add(T,P_factor).toFixed(2);
 	
 	console.log('E =' + E);
 	console.log('T =' + T);
@@ -451,14 +495,14 @@ document.getElementById('gatis').style.width = newgw + "%";
 	 }
 	 //var p = $('#p').val();//1.25;///pitch of the thread in mm
 	 var alpha = 60;///thread angle
-	 var H = math.multiply(math.divide(p,2),math.cot(math.multiply(math.divide(alpha,2),math.divide(math.pi,180))));///Height of threads 
+	 var H = math.multiply(math.divide(p,2),math.cot(math.multiply(math.divide(alpha,2),math.divide(math.pi,180)))).toFixed(2);///Height of threads 
 	 
 	  //M = $('#M').val();//25.008;//math.add(25.088, math.random(0,0.05));///distance over the wire, measured using a suitable micrometer.
 	var p1 = M;
 	var p2 = math.multiply(d,math.add(1,math.csc(math.multiply(math.divide(alpha,2),math.divide(math.pi,180)))));
 	var p3 = H;
 	
-     E = math.subtract(p1,math.subtract(p2,p3));
+     E = math.subtract(p1,math.subtract(p2,p3)).toFixed(2);
 	 
 	console.log('E =' + E);
 	console.log('H =' + H);
@@ -475,13 +519,15 @@ document.getElementById('gatis').style.width = newgw + "%";
 
 function Refresh(){///donot keep the name of the function as clear
 
-document.getElementById('sideWire1').style.display = "none";
+ document.getElementById('sideWire1').style.display = "none";
 document.getElementById('sideWire2').style.display = "none";
 
 sideCount = 0;
 document.getElementById('oneWire').style.visibility = "visible";
 //document.getElementById('twoWire').style.visibility = "visible";
 document.getElementById('onewireT').style.visibility = "visible";
+document.getElementById('oneWire').classList.remove('rotateWireR1');
+document.getElementById('oneWire').style.transform = "rotate(340deg)";
 //document.getElementById('twowireT').style.visibility = "visible";
 document.getElementById('calcbtn').disabled = true;
 
@@ -492,19 +538,28 @@ if (document.getElementById('seudobox').value == 1){
 	document.getElementById('twoWire').style.visibility = "hidden";
 	document.getElementById('twowireT').style.visibility = "hidden";
 	$('#H').val(0);
-	$('#HT').css('display','none');
+	$('#HT').css('visibility','hidden');
+	$('#H').css('visibility','hidden');
+	document.getElementById('twz').style.display = "none";
+	document.getElementById('twztext').style.display = "none";
 }
 
 if (document.getElementById('seudobox').value == 2){
 	document.getElementById('twoWire').style.visibility = "visible";
 	document.getElementById('twowireT').style.visibility = "visible";
+	document.getElementById('twoWire').classList.remove('rotateWireR1');
+	document.getElementById('twoWire').style.transform = "rotate(340deg)";
 	$('#H').val(0);
-	$('#HT').css('display','block');
+	$('#HT').css('visibility','visible');
+	$('#H').css('visibility','visible');
+	document.getElementById('thwz').style.display = "none";
+	document.getElementById('thwztext').style.display = "none";
 }
 
 	document.getElementById('M').value = 0;
-	document.getElementById('E').value = 0;
-	
+	document.getElementById('E').value = 0; 
+	document.getElementById('screwThread2').style.zIndex=0;
+	//location.reload();
 		
  }
 

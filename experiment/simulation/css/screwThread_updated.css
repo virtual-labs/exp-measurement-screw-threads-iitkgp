@@ -18,12 +18,22 @@
     z-index: 2;
 }
 #screwThread2{
-visibility:hidden;
-position: absolute;
-left: 25%;
-top: 59.5%;
-width: 23%;
-z-index: 2;
+visibility: hidden;
+    position: absolute;
+    left: 28%;
+    top: 52.5%;
+    width: 30%;
+    z-index: -2;
+}
+#twz{
+display: none;
+
+    width: 100%;
+}
+#thwz{
+display: none;
+
+    width: 100%;
 }
 #twoWire{
 visibility:hidden;
@@ -58,8 +68,55 @@ visibility:visible;
     top: 87.5%;
     width: 18%; */
     z-index: 2;
-    /* transform: rotate(349deg);*/
+    transform: rotate(349deg);
 }
+/*-----------------------------for one wire image rotation in 3d for two-wire method--------------------*/	
+.rotateWireR1{
+	animation:rotateWire 2s linear forwards;	
+}
+
+@keyframes rotateWire {
+  0% {
+    transform: rotate(340deg);
+	/*transform-origin:50% 20%;*/
+  }
+  10% {
+    transform: rotate(320deg);
+	/*transform-origin:50% 20%;*/
+  }
+  20% {
+    transform: rotate(300deg);
+	/*transform-origin:50% 20%;*/
+  }
+  30% {
+    transform: rotate(280deg);
+	/*transform-origin:50% 20%;*/
+  }
+  40% {
+    transform: rotate(260deg);
+	/*transform-origin:50% 20%;*/
+  }
+  50% {
+    transform: rotate(250deg);
+	/*transform-origin:50% 20%;*/
+  }
+  
+  70% {
+    transform: rotate(245deg);
+	/*transform-origin:50% 20%;*/
+  }
+  
+  100% {
+    transform: rotate(243deg);
+	/*transform-origin:50% 20%;*/
+	  }
+   /*from {left: 47.7%;}
+    to   {left: 46%;}*/
+}	
+
+
+
+
 #oneWire2{
 	position: absolute;
     visibility: hidden;
@@ -91,6 +148,18 @@ visibility:visible;
     /* font-size: 1vw; */
     color: blue;
 }
+#twztext{
+display: none;
+    /* top: 123.5%; */
+    /* font-size: 1vw; */
+    color: blue;
+}
+#thwztext{
+display: none;
+    /* top: 123.5%; */
+    /* font-size: 1vw; */
+    color: blue;
+}
 #twowireT{
 visibility:hidden;
    /*  left: 49%;
@@ -106,18 +175,20 @@ visibility:hidden;
 }
 
 #sideWire1{
-	display:none;
-position: absolute;
-    left: 21%;
-    top: 49.5%;
-	z-index:1;
+width: 29%;
+    display: none;
+    position: absolute;
+    left: 12%;
+    top: 52.5%;
+    z-index: -2;
 }
 #sideWire2{
-	display:none;
-position: absolute;
-    left: 55%;
-    top: 49.5%;
-	z-index:2;
+width: 30%;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 61.5%;
+    z-index: -3;
 }
 
 #rotategear{	
@@ -146,11 +217,11 @@ z-index: 2;
 }
 #fmmv{
 position: absolute;
-width: 11%;
-height: 29%;
-right: 24%;
-top: 65.7%;
-z-index: 1;
+    width: 11%;
+    height: 29%;
+    right: 24%;
+    top: 65.7%;
+    z-index: -3;
 }
 #cscale{
 position: absolute;

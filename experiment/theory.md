@@ -1,89 +1,78 @@
 ## Theory
 
-Screw threads are commonly used in mechanical assemblies to provide secure connections and transmit force. Accurate measurement of their key parameters, including major diameter, is crucial for ensuring proper functioning and transmission of load.
+Screw threads are commonly used in mechanical assemblies to verify their compliance with manufacturing specifications and tolerances. Accurate measurement of their key parameters, including major diameter, is crucial for ensuring proper functioning.
 
 **Two-wire method:**
 
-The two-wire method utilizes two wires of equal diameter placed tangentially on opposite flanks of the screw thread. The distance between the wires is measured using a micrometer. The wire diameter, pitch of the thread, and the effective diameter (E) can be calculated. Figure 1 below represents the two-wire technique.
-
+The two-wire method utilizes two wires of equal diameter placed tangentially on opposite flanks of the screw thread. The distance between the wires is measured using a micrometer. The wire diameter, pitch of the thread, and the effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span>) can be calculated. Fig. 1 below represents the schematic of the micrometer and the two-wire technique.
 
 <div align="center">
 <img src="images/figure1.png" class="img-fluid">
 
-**Fig. 1 Two wire technique**
+<b>>Fig. 1. (a) Schematic of Micrometer (b) Two-wire technique</b>
 </div>
 
 **Three-wire Method:**
 
-The three-wire method is a more accurate technique than the two-wire method for the measurement of screw thread parameters. This method involves placing three wires of known diameter in contact with the screw thread flanks, forming an equilateral triangle. Figure 2 below represents the three-wire technique.
+The three-wire method is a more accurate and less sensitive technique for metric thread than the two-wire method for the measurement of screw thread parameters. This method involves placing three wires of known diameter in contact with the screw thread flanks and measured using micrometer. The flank is the slanted surface between the peak of the thread and the root. Fig. 2 below represents the schematic of the micrometer and the three-wire technique.
 
 <div align="center">
 <img src="images/figure2.png" class="img-fluid">
 
-**Fig. 2  Three-wire technique**
+<b>>Fig.2. (a) Schematic of Micrometer (b) Three-wire technique</b>>
 </div>
 
 **Calculation:**
 
-Metric thread is used in this experiment having thread angle ( &alpha; ) = 60 &deg;
+Metric thread is used in this experiment having thread angle (<span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">&alpha;</span>) = 60 &deg;
 
 <b>(i)	Two-wire method:</b>
 
 <div align="center">
 <img src="images/figure3.png" class="img-fluid">
 
-**Fig. 3 Two-wire measurement** 
+<b>>Fig. 3 Two-wire measurement</b> 
 </div>
 
-M = distance over the wire, measured using a suitable micrometer.
+<span style="font-family:'Bodoni MT';font-style:italic">M</span> = distance over the wire, measured using a suitable micrometer.
 
-Effective diameter ( E ) = T + P
+Effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span>), 
 
-Where T is the dimension under the wire till the point of contact between wire and screw flank, and P is the correction factor
+$$E  = T + P \tag{1}$$
 
-And, T = M - 2d
+Where <span style="font-family:'Bodoni MT';font-style:italic">T</span> is the dimension under the wire till the point of contact between wire and screw flank, and <span style="font-family:'Bodoni MT';font-style:italic">P</span> is the correction factor
 
-d = diameter of the wire
+And, 
 
-P = p/2 cot ( &alpha;/2 ) – d [ cosec ( &alpha;/2 ) - 1 ] 
+$$T = M - 2d \tag{2}$$
 
-p = pitch of the thread
+<span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> = diameter of the wire
 
-&alpha; = thread angle = 60 &deg; ( for metric thread )
+$$P = \frac{p}{2} cot (\frac{\alpha}{2}) – d [cosec (\frac{\alpha}{2}) - 1] \tag{3}$$ 
 
-<!-- for p = 1.25 mm, d = 0.722 mm, M = 25.08 mm -->
+<span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> = pitch of the thread
 
-E = T + P
-
-T = M – 2d
-
-P = p/2 cot ( &alpha;/2 ) – d [ cosec ( &alpha;/2 ) - 1 ]
-<!-- Therefore, P = 0.3605 mm
-T = 23.636 mm
-E = 23.9965 mm -->
+<span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">&alpha;</span> = thread angle = 60 &deg; (for metric thread)
 
 <b>(ii) Three-wire method:</b>
 
 <div align="center">
 <img src="images/figure4.png" class="img-fluid">
 
-**Fig. 4 Three-wire measurement**
+<b>Fig. 4 Three-wire measurement</b>
 </div>
 
-M = distance over the wire, measured using a suitable micrometer.
+<span style="font-family:'Bodoni MT';font-style:italic">M</span> = distance over the wire, measured using a suitable micrometer.
 
-p = pitch of the thread screw
+<span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> = pitch of the thread screw
 
-Height of threads ( H ) = p/2 cot ( &alpha;/2 )
+Height of threads (<span style="font-family:'Bodoni MT';font-style:italic">H</span>),
 
-&alpha; = angle of thread = 60 &deg; ( for metric thread )  
+$$H = \frac{p}{2} cot (\frac{\alpha}{2}) \tag{4}$$
 
-E = M – d [ 1 + cosec ( &alpha;/2 ) ] + p/2 cot ( &alpha;/2 )  
+<span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">&alpha;</span> = angle of thread = 60 &deg; (for metric thread)  
 
-<!-- For, p = 1.25 mm, d = 0.722 mm, M = 25.088 mm 
- H = p/2 cot (α/2) = 1.0825 mm
-E = M – d [1+cosec (α/2)] + p/2 cot (α/2) = 21.7515 mm-->
- 
+$$E = M – d [1 + cosec (\frac{\alpha}{2}) + \frac{p}{2} cot (\frac{\alpha}{2})] \tag{5}$$  
 
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								
