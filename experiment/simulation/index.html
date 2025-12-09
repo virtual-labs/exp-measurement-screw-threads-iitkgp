@@ -83,35 +83,35 @@
               <div id="inst" style="display:none">
 			  <ol>
                       
-					  <li> First click on 'Two-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d from the
-					  given dropdown. The value of pitch of thread p is 1.25 mm.</li><br/>					  
+					  <li> First click on 'Two-wire' under 'Experiment Parts'. Select 0.722 (standard diameter of wire) mm as the value of wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> from the
+					  given dropdown. The value of pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> is 1.25 mm.</li><br/>					  
 					  
 					  <li>Click on the one wire for two times to place the two wires on the measuring faces of micrometer spindle and anvil.</li><br/>
 					 
 					 <li>Click on the screw thread specimen to place it in between the two wires on the measuring faces of micrometer spindle and anvil.
-					 Click on the left side arrow key on the 'Rotate Micrometer' button. Wait until the circular scale of the micrometer stops rotating. Again click on the same arrow key
-					 . Click it until the screw thread is properly fixed between the wires. After a ratchet wrench sound one alert message will be shown when it is properly fixed. 
+					 Click on the clockwise arrow sign on the 'Rotate Micrometer' button. Wait until the circular scale of the micrometer stops rotating. Again click on the same arrow key
+					 . Click it until the screw thread is properly fixed between the wires. After a ratchet wrench sound, one alert message will be shown when it is properly fixed. 
 					 </li></br>
 					 
-					 <li>Click on 'Calculate' button to find out the value of the effective diameter ( E (mm)) and 
-					 the distance between the outer surfaces of the two wires M ( mm ). Click on the right side arrow key on the 'Rotate Micrometer' button two to three times
-					to move the micrometer spindle from fixed position.</li><br/>
+					 <li>Click on 'Calculate' button to find out the value of the effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)). Click on the anticlockwise arrow sign on the 'Rotate Micrometer' button to move the micrometer spindle from fixed position.</li><br/>
 
 					 <li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.
-					 Follow steps 2-4 by selecting 0.866 mm as the value of wire diameter d from the given dropdown.
-					 The value of pitch of thread p is 1.5 mm. Click on 'Clear' button.</li><br/> 
+					 Follow steps 2-4 by selecting 0.866 mm as the value of wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> from the given dropdown.
+					 The value of pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> is 1.5 mm.</li><br/>
+
+					 <li>Click on 'Clear' button.</li><br/>
 					 
-					 <li>Now click on 'Three-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter d from the
-					  given dropdown. The value of pitch of thread p is 1.25 mm.</li><br/>
+					 <li>Now click on 'Three-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> from the
+					  given dropdown. The value of pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> is 1.25 mm.</li><br/>
 					  
 					  <li>Click on the one wire and two wire to place them on the measuring faces of micrometer spindle and anvil.</li><br/>
 						
-					<li>Follow steps 3-4 to measure the effective diameter ( E (mm)), the distance between the outer surfaces of the two wires M
-					( mm ) and the value of H ( height of the threads in mm ). </li><br/>
+					<li>Follow steps 3-4 to measure the effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)), the distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span>
+					(mm) and the value of <span style="font-family:'Bodoni MT';font-style:italic">H</span> (height of the threads in mm). </li><br/>
 					
 					<li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.
-					 Follow steps 7-9 by selecting 0.866 mm as the value of wire diameter d from the
-					  given dropdown. The value of pitch of thread p is 1.5 mm. Click on 'Clear' button.</li><br/> 
+					 Follow steps 8-10 by selecting 0.866 mm as the value of wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> from the
+					  given dropdown. The value of pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> is 1.5 mm. Click on 'Clear' button.</li><br/> 
 
 					 
 					<br/><br/>
@@ -150,7 +150,7 @@
 
 <div class="col-md-4">		
 <button type="button" id="g1"  class="btn btn-success " >
- <i class="fa fa-angle-double-left" id="rbtnP" onclick="rotategauge();cscalePosChng();screw_widthincr()" style="color:white;pointer-events:auto"></i>&nbsp;Rotate Micrometer&nbsp;<i class="fa fa-angle-double-right" id="rbtnM" onclick="rotategaugerev();cscalePosChngRev();screw_widthdecr()" style="color:white;pointer-events:auto"></i>
+ <b id="rbtnP" onclick="rotategauge();cscalePosChng();screw_widthincr()" style="color:white;pointer-events:auto">&circlearrowright;</b>&nbsp;Rotate Micrometer&nbsp;<b id="rbtnM" onclick="rotategaugerev();cscalePosChngRev();screw_widthdecr()" style="color:white;pointer-events:auto">&circlearrowleft;</b>
 </button>
 		
 	</div>
@@ -165,36 +165,37 @@
 			<div class="card" style=" width:100%;background-color:pink" > 
 			
 			<div class="card-body">
-			<span class="card-title bg-light"> Measurement of the effective diameter E</span><br/><br/>
+			<b class="card-title bg-light"> Measurement of the Effective Diameter <span style="font-family:'Bodoni MT';font-style:italic">E</span></b><br/><br/>
 
-			<span class="card-text" >Choose the wire diameter d ( mm ):&nbsp;
-			<select class="card-text" id="d" style="width:10%;text-align:center" onclick="pValueChange(this)">
+			<span class="card-text" style="position:absolute;left:20%" >Choose the wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> (mm):</span>&nbsp;
+			<select class="card-text" id="d" style="position:absolute;left:66%;width:15%;text-align:center" onclick="pValueChange(this)">
 			  <option >0.722</option>
 			  <option >0.866</option>
 			</select>			
-			</span><br/><br/>
+			<br/><br/>
 
 
-			<span class="card-text" >Choose the pitch of thread p ( mm ):&nbsp;
-			<input id="p" style="width:30%;text-align:center" value="1.25" readonly=readonly>
+			<span class="card-text" style="position:absolute;left:20%">Choose the pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> (mm):</span>&nbsp;
+			<input id="p" style="position:absolute;left:66%;width:15%;text-align:center" value="1.25" readonly=readonly>
 			<!-- <select class="card-text" id="p" style="width:10%;text-align:center">
 			  <option>1.25</option>
 			  <option>1.5</option>
 			</select> -->			
-			</span><br/><br/>
+			<br/><br/>
 
 
 			
-			<span class="card-text" >The distance between the outer surfaces of the two wires M ( mm ):&nbsp;
-			<input id="M" style="width:30%;text-align:center" value="0" readonly=readonly>
+			<span class="card-text" style="position:absolute;left:20%">The distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span> (mm):</span>&nbsp;
+			<input id="M" style="position:absolute;left:66%;width:15%;text-align:center" value="0" readonly=readonly>
 			<!-- <select class="card-text" id="M" style="width:10%;text-align:center">
 			  <option>25.08</option>
 			  <option>26.58</option>
 			</select> -->			
-			</span><br/><br/>
+			<br/><br/>
 						
-			<span class="card-text">The effective diameter ( E (mm)):&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
-			<span class="card-text" id="HT" style="display:none">The effective diameter ( H (mm)):&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
+			<span class="card-text" style="position:absolute;left:20%">The effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)):</span>&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
+			<span class="card-text" id="HT" style="visibility:hidden;position:absolute;left:20%">Height of the threads (<span style="font-family:'Bodoni MT';font-style:italic">H</span> (mm)):</span>&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="visibility:hidden;position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
+			
 			<button  type="button"   id="calcbtn" class="btn btn-success " onclick="calculate()" disabled="true">Calculate</button>
 			<button  type="button" class="btn btn-danger " onclick="Refresh()" >Clear</button>
 			</div></div></div>
@@ -223,15 +224,15 @@
 			<img id="gatis" src="./images/mjvprt.png" >
 			
 			<img id="screwThread2" src="./images/screwthread.png" onclick="moveThread()" >
-			<img id="sideWire1" src="./images/sidewire.png" onclick = "">
-			<img id="sideWire2" src="./images/sidewire.png" onclick = "">
+			<img id="sideWire1" src="./images/sl2.png" onclick = "">
+			<img id="sideWire2" src="./images/onewireR.png" onclick = "">
 			
-			<img id="oneWire4" src="./images/onewire.png">
-			<img id="oneWire3" src="./images/onewire.png">
-			<img id="oneWire2" src="./images/onewire.png">
+			<img id="oneWire4" src="./images/onewireR.png">
+			<img id="oneWire3" src="./images/onewireR.png">
+			<img id="oneWire2" src="./images/onewireR.png">
 			
-			<img id="twoWire4" src="./images/twowire.png">
-			<img id="twoWire3" src="./images/twowire.png">
+			<img id="twoWire4" src="./images/twowireR.png">
+			<img id="twoWire3" src="./images/twowireR.png">
 			
 			<img id="scruthrd2" src="./images/screwthread.png">
 			<img id="scruthrd3" src="./images/screwthread.png">
@@ -249,8 +250,12 @@
 		
 			<div class="col-md-4 "><!--2nd col under 2nd row start -->
 			
-			<img id="screwThread" src="./images/screwthread.png" onclick="moveThread()" > 
+			<img id="screwThread" src="./images/screwthread.png" onclick="moveThread()" >
 			<p id = "sTtext">Screw thread specimen</p>
+			<img id="twz" src="./images/twz.png" >
+			<p id = "twztext">Cross section of Screw thread specimen for Two wire method</p>
+			<img id="thwz" src="./images/thwz.png" >			
+			<p id = "thwztext">Cross section of Screw thread specimen for Three wire method</p>
 			</div>
 			
 			<div class="col-md-4 ">
