@@ -53,7 +53,7 @@
         "c": "Both methods are equally sensitive",
         "d": "Neither method is sensitive to thread angle variations"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "Beginner"
     }
   ]
