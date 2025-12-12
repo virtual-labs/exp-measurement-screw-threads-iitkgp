@@ -7,7 +7,7 @@ Screw threads are commonly used in mechanical assemblies to verify their complia
 The two-wire method utilizes two wires of equal diameter placed tangentially on opposite flanks of the screw thread. The distance between the wires is measured using a micrometer. The wire diameter, pitch of the thread, and the effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span>) can be calculated. Fig. 1 below represents the schematic of the micrometer and the two-wire technique.
 
 <div align="center">
-<img src="images/figure1.png" class="img-fluid">
+<img src="images/figure1.png" style="width:70%">
 
 <b>Fig. 1. (a) Schematic of Micrometer (b) Two-wire technique</b>
 </div>
@@ -17,7 +17,7 @@ The two-wire method utilizes two wires of equal diameter placed tangentially on 
 The three-wire method is a more accurate and less sensitive technique for metric thread than the two-wire method for the measurement of screw thread parameters. This method involves placing three wires of known diameter in contact with the screw thread flanks and measured using micrometer. The flank is the slanted surface between the peak of the thread and the root. Fig. 2 below represents the schematic of the micrometer and the three-wire technique.
 
 <div align="center">
-<img src="images/figure2.png" class="img-fluid">
+<img src="images/figure2.png" style="width:70%">
 
 <b>Fig.2. (a) Schematic of Micrometer (b) Three-wire technique</b>>
 </div>
