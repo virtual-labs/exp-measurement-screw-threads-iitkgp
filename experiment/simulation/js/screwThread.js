@@ -244,7 +244,7 @@ document.getElementById('movechk').value = 1;
 
 
 //////animation Flange micrometer clockwise//////
- var p = 0, t=0, interval, intervalrev;
+ var p = 0, t=0;
 function cw(){
 	
 const images = ['./images/fm1.png','./images/fm2.png','./images/fm3.png','./images/fm1.png'];
@@ -253,7 +253,7 @@ const images = ['./images/fm1.png','./images/fm2.png','./images/fm3.png','./imag
         p++;
 		if(p == images.length){
 		 p = 0	;
-clearInterval(interval);		 
+//clearInterval(interval);		 
         }
 //setTimeout(function(){ cw(); },100);
  //clearTimeout(8);
@@ -267,29 +267,93 @@ const images = ['./images/fm1.png','./images/fm3.png','./images/fm2.png','./imag
         p++;
 		if(p == images.length){
 		 p = 0	;
-clearInterval(intervalrev);		 
+//clearInterval(intervalrev);		 
         }
 //setTimeout(function(){ cw(); },100);
  //clearTimeout(8);
 
  }
 
-function rotategauge(){
+/* function rotategauge(){
 	
 	 interval = setInterval(cw,100);
+	 document.getElementById('g1').style.poiterEvents="none";
 	 document.getElementById('g1').disabled=true;
 	 setTimeout(function() {
    document.getElementById('g1').disabled=false;
+   document.getElementById('g1').style.poiterEvents="auto";
 }, 1500);
 }
 
 function rotategaugerev(){
 	
 	 intervalrev = setInterval(acw,100);
+	  document.getElementById('g1').style.poiterEvents="none";
 	 document.getElementById('g1').disabled=true;
 	 setTimeout(function() {
    document.getElementById('g1').disabled=false;
+   document.getElementById('g1').style.poiterEvents="auto";
 }, 1500);
+}
+ */
+ let interval = null;
+let intervalrev = null;
+let isRotating = false;
+
+function disableGauge() {
+  const g = document.getElementById('g1');
+  g.style.pointerEvents = "none";
+  g.disabled = true;
+}
+
+function enableGauge() {
+  const g = document.getElementById('g1');
+  g.style.pointerEvents = "auto";
+  g.disabled = false;
+  isRotating = false;
+}
+
+function clearAllIntervals() {
+  if (interval) {
+    clearInterval(interval);
+    interval = null;
+  }
+  if (intervalrev) {
+    clearInterval(intervalrev);
+    intervalrev = null;
+  }
+}
+
+function rotategauge() {
+  if (isRotating) return;   // 🚫 block double click
+
+  isRotating = true;
+  clearAllIntervals();
+  disableGauge();
+
+  interval = setInterval(cw, 100);
+
+  setTimeout(() => {
+    clearInterval(interval);
+    interval = null;
+    enableGauge();
+  }, 1500);
+}
+
+function rotategaugerev() {
+  if (isRotating) return;   // 🚫 block double click
+
+  isRotating = true;
+  clearAllIntervals();
+  disableGauge();
+
+  intervalrev = setInterval(acw, 100);
+
+  setTimeout(() => {
+    clearInterval(intervalrev);
+    intervalrev = null;
+    enableGauge();
+  }, 1500);
 }
 
 ///incr the right position of gauge . with one complete revolution circular scale moves 1 mm forward
@@ -377,6 +441,10 @@ document.getElementById('gatis').style.width = newgw + "%";
 	gwCount = undefined; */
 	document.getElementById('calcbtn').disabled = false;
 	document.getElementById('rbtnP').style['pointer-events'] = "none";
+}
+
+if(newPos == 27 && document.getElementById('movechk').value == 1){
+	alert('Can not be rotated further.');
 }
 
  if(document.getElementById('movechk').value == 1 ){

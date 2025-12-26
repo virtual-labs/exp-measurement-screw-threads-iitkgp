@@ -134,7 +134,7 @@
 	
 	</div>
 	
-	<div class="col-md-4">	
+	<div class="col-md-8">	
 	
 	<div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -148,12 +148,7 @@
 
 </div>
 
-<div class="col-md-4">		
-<button type="button" id="g1"  class="btn btn-success " >
- <b id="rbtnP" onclick="rotategauge();cscalePosChng();screw_widthincr()" style="color:white;pointer-events:auto">&circlearrowright;</b>&nbsp;Rotate Micrometer&nbsp;<b id="rbtnM" onclick="rotategaugerev();cscalePosChngRev();screw_widthdecr()" style="color:white;pointer-events:auto">&circlearrowleft;</b>
-</button>
-		
-	</div>
+
 	
 <div class="col-md-2"></div>	
 	
@@ -165,8 +160,8 @@
 			<div class="card" style=" width:100%;background-color:pink" > 
 			
 			<div class="card-body">
-			<b class="card-title bg-light"> Measurement of the Effective Diameter <span style="font-family:'Bodoni MT';font-style:italic">E</span></b><br/><br/>
-
+			<!-- <b class="card-title bg-light"> Measurement of the Effective Diameter <span style="font-family:'Bodoni MT';font-style:italic">E</span></b><br/><br/>
+ -->
 			<span class="card-text" style="position:absolute;left:20%" >Choose the wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> (mm):</span>&nbsp;
 			<select class="card-text" id="d" style="position:absolute;left:66%;width:15%;text-align:center" onclick="pValueChange(this)">
 			  <option >0.722</option>
@@ -175,7 +170,7 @@
 			<br/><br/>
 
 
-			<span class="card-text" style="position:absolute;left:20%">Choose the pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> (mm):</span>&nbsp;
+			<span class="card-text" style="position:absolute;left:20%">The pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> (mm):</span>&nbsp;
 			<input id="p" style="position:absolute;left:66%;width:15%;text-align:center" value="1.25" readonly=readonly>
 			<!-- <select class="card-text" id="p" style="width:10%;text-align:center">
 			  <option>1.25</option>
@@ -185,17 +180,17 @@
 
 
 			
-			<span class="card-text" style="position:absolute;left:20%">The distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span> (mm):</span>&nbsp;
+			<!-- <span class="card-text" style="position:absolute;left:20%">The distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span> (mm):</span>&nbsp;
 			<input id="M" style="position:absolute;left:66%;width:15%;text-align:center" value="0" readonly=readonly>
 			<!-- <select class="card-text" id="M" style="width:10%;text-align:center">
 			  <option>25.08</option>
 			  <option>26.58</option>
-			</select> -->			
+			</select> --			
 			<br/><br/>
 						
 			<span class="card-text" style="position:absolute;left:20%">The effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)):</span>&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
 			<span class="card-text" id="HT" style="visibility:hidden;position:absolute;left:20%">Height of the threads (<span style="font-family:'Bodoni MT';font-style:italic">H</span> (mm)):</span>&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="visibility:hidden;position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
-			
+			 -->
 			<button  type="button"   id="calcbtn" class="btn btn-success " onclick="calculate()" disabled="true">Calculate</button>
 			<button  type="button" class="btn btn-danger " onclick="Refresh()" >Clear</button>
 			</div></div></div>
@@ -217,6 +212,11 @@
 			
 			<img  src="./images/fmfixed2.png">
 			
+					
+			<button type="button" id="g1"  class="btn btn-success " >
+			 <b id="rbtnP" onclick="rotategauge();cscalePosChng();screw_widthincr()" style="color:white;pointer-events:auto">&circlearrowright;</b>&nbsp;Rotate Micrometer&nbsp;<b id="rbtnM" onclick="rotategaugerev();cscalePosChngRev();screw_widthdecr()" style="color:white;pointer-events:auto">&circlearrowleft;</b>
+			</button>
+	
 			<img id="fmls" src="./images/fmls.png" onclick="">	
 			<img id="fmmv" src="./images/fmmove.png" onclick="">	
 			 <img id="cscale" src="./images/fm1.png" >
@@ -246,6 +246,7 @@
 	<!--<button class="btn btn-success" onclick="Dw_Tester()">Simulate</button>-->
 	</div>
 	
+	
 	 <div class="row"><!--- 2nd row under fourth container start--->		
 		
 			<div class="col-md-4 "><!--2nd col under 2nd row start -->
@@ -266,55 +267,53 @@
 			<div class="col-md-4 ">
 			<img id="oneWire" src="./images/onewire.png" onclick = "side1()">
 			<p id = "onewireT">One Wire</p>
-			
-		<!-- <button type="button"  class="btn btn-info " onclick="CreateTable()" >Add to Table</button>
-		<!-- <button type="button"   class="btn btn-success " onclick="plot()" >Plot</button> --
-		<button type="button"   class="btn btn-danger " onclick="Refresh()" >Clear</button> -->
-		</div>
-		</div> 
-		
-	<!-- <div class="row"><!--- 2nd row under fourth container start---		
-		
-			<div class="col-md-12 "><!--2nd col under 2nd row start --	
-			
-			<br/>
-			<div><a class="nav-link" data-bs-toggle="tab"  id="myTables" style="background-color:#128BD9" ><span class=" h3 text-dark"> Table </span></a>
-			
-			<table id="obsTable1" style="display:none;width:100%">			
-				
-				  <tr>
-					<th>Sl No.</th>
-					<th>t<sub>1</sub>(in)</th> 
-					<th>t<sub>2</sub>(in)</th>
-					<th>t<sub>3</sub>(in)</th>
-					<th>Mean t(in)</th>
-					<th>Theoritical thickness T(in)</th>
-					<th>Variation(in)</th>
-				  </tr>
-				  
-			</table>
-			
-			</div>	
-				</div>				
-		
-	</div><!--- 2nd row under fourth container end---
-
-
-	 <div class="row justify-content-center"><!-----------------------graph T vs. w-----------------------------------------
-		
-	 
-			<div class="col-md-12">
-				
-				<div align="center" id="myPlot" style="width:100%;max-width:700px;padding-left:10%"></div>
-				
-				
-				
 			</div>
 			
+			<!-- <div class="col-md-10">
+	<div class="card" style=" width:100%;background-color:pink" > 		
+	<div class="card-body">
+			<b class="card-title bg-light"> Measurement of the Effective Diameter <span style="font-family:'Bodoni MT';font-style:italic">E</span></b><br/><br/>
 			
+			<span class="card-text" style="position:absolute;left:20%">The distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span> (mm):</span>&nbsp;
+			<input id="M" style="position:absolute;left:66%;width:15%;text-align:center" value="0" readonly=readonly>
+			<!-- <select class="card-text" id="M" style="width:10%;text-align:center">
+			  <option>25.08</option>
+			  <option>26.58</option>
+			</select> --			
+			<br/><br/>
+						
+			<span class="card-text" style="position:absolute;left:20%">The effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)):</span>&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
+			<span class="card-text" id="HT" style="visibility:hidden;position:absolute;left:20%">Height of the threads (<span style="font-family:'Bodoni MT';font-style:italic">H</span> (mm)):</span>&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="visibility:hidden;position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
+			
+	</div>
+	</div>
+	</div> -->
+	
+		</div> 
 		
-	</div>	 -->
+		 <div class="row">	
+		<div class="col-md-1"></div>
+			<div class="col-md-10 ">
+	<div class="card" style=" width:100%;background-color:pink" >		
+	<div class="card-body">
+			<b class="card-title bg-light"> Measurement of the Effective Diameter <span style="font-family:'Bodoni MT';font-style:italic">E</span></b><br/><br/>
+			
+			<span class="card-text" style="position:absolute;left:20%">The distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span> (mm):</span>&nbsp;
+			<input id="M" style="position:absolute;left:72%;width:15%;text-align:center" value="0" readonly=readonly>
+			<!-- <select class="card-text" id="M" style="width:10%;text-align:center">
+			  <option>25.08</option>
+			  <option>26.58</option>
+			</select> -->			
+			<br/><br/>
+						
+			<span class="card-text" style="position:absolute;left:20%">The effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)):</span>&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="position:absolute;left:72%;width:15%;text-align:center"><br/><br/>
+			<span class="card-text" id="HT" style="visibility:hidden;position:absolute;left:20%">Height of the threads (<span style="font-family:'Bodoni MT';font-style:italic">H</span> (mm)):</span>&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="visibility:hidden;position:absolute;left:72%;width:15%;text-align:center"><br/><br/>
+			
 
+	</div>
+	</div>
+	<div class="col-md-1"></div>
+	</div> 
 	
 	
           <!-- Code End here-->
