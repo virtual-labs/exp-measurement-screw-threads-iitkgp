@@ -71,16 +71,18 @@ function wire1_transitionL(){
 document.getElementById('oneWire').classList.add('rotateWireR1');
 setTimeout(function(){	
 $('#oneWire2').css('visibility','visible');
-	
+document.getElementById('oneWire2').src = "./images/sl2.png";	
  },2200);	
  
  setTimeout(function(){	
 $('#oneWire3').css('visibility','visible');	
+document.getElementById('oneWire3').src = "./images/sl2.png";
 $('#oneWire2').css('visibility','hidden');
  },2500);	
  
  setTimeout(function(){	
 $('#oneWire4').css('visibility','visible');
+document.getElementById('oneWire4').src = "./images/sl2.png";
 $('#oneWire3').css('visibility','hidden');	
  },2800);
 
@@ -96,16 +98,18 @@ function wire1_transitionR(){
 //document.getElementById('oneWire').classList.add('rotateWireR1');
 setTimeout(function(){	
 $('#oneWire2').css('visibility','visible');
-	
+document.getElementById('oneWire2').src = "./images/onewireR.png";	
  },500);	
  
  setTimeout(function(){	
 $('#oneWire3').css('visibility','visible');	
+document.getElementById('oneWire3').src = "./images/onewireR.png";
 $('#oneWire2').css('visibility','hidden');
  },800);	
  
  setTimeout(function(){	
 $('#oneWire4').css('visibility','visible');
+document.getElementById('oneWire4').src = "./images/onewireR.png";
 $('#oneWire3').css('visibility','hidden');	
  },900);
 
@@ -179,7 +183,7 @@ if(sideCount == 2){
 	wire1_transitionR();
 	setTimeout(function(){
 	document.getElementById('sideWire2').style.display = "block";
-	document.getElementById('sideWire2').src = "./images/onewireR.png";
+	document.getElementById('sideWire2').src = "./images/onewireR3.png";
 	document.getElementById('oneWire').style.visibility = "hidden";
 	document.getElementById('onewireT').style.visibility = "hidden";
 	 },1000);
@@ -207,7 +211,7 @@ if(document.getElementById('seudobox').value == 2){
 	wire2_transition();	
 setTimeout(function(){	
 document.getElementById('sideWire2').style.display = "block";
-	document.getElementById('sideWire2').src = "./images/twowireR.png";
+	document.getElementById('sideWire2').src = "./images/twowireR3.png";
 document.getElementById('twoWire').style.visibility = "hidden";
 document.getElementById('twowireT').style.visibility = "hidden";
 },2900);	
@@ -361,8 +365,8 @@ var posCount = 0;
 //var posCount2=0;
 var gwCount = 0;
 //gwCount2=0;
-var csPos = -102.8;//16.2;///circular scale right position
-var gw = 4;//3;///gatis div width
+var csPos = -93.8;//16.2;///circular scale right position
+var gw = 13;//3;///gatis div width
 
 function cscalePosChng(){
 
@@ -404,7 +408,7 @@ document.getElementById('gatis').style.width = newgw + "%";
 
 /////////////////////////////////////////
  var screwwidth = 11;//6;
- var wirePos = 50;//32;
+ var wirePos = 42;//32;
  var counterscru = 0,counterscru2=0;
  function screw_widthincr(){
 	 
@@ -415,9 +419,11 @@ document.getElementById('gatis').style.width = newgw + "%";
 	var newPos = math.add(screwwidth,counterscru);
 	var newWirePos = math.subtract(wirePos,counterscru);
 	
+	if((newPos <= 16 && document.getElementById('movechk').value == 2)||(newPos < 17 && document.getElementById('movechk').value == 1)){
 	document.getElementById('fmmv').style.width = newPos + "%";
 	document.getElementById('sideWire2').style.left = newWirePos + "%";
-	if(newPos == 26 && document.getElementById('movechk').value == 2){
+	}
+	if(newPos == 16 && document.getElementById('movechk').value == 2){
 	
 	var sound = document.getElementById("myAudio"); 
  
@@ -443,23 +449,25 @@ document.getElementById('gatis').style.width = newgw + "%";
 	document.getElementById('rbtnP').style['pointer-events'] = "none";
 }
 
-if(newPos == 27 && document.getElementById('movechk').value == 1){
+if(newPos == 17 && document.getElementById('movechk').value == 1){
 	alert('Can not be rotated further.');
+	document.getElementById('rbtnP').style['pointer-events'] = "none";
+	document.getElementById('rbtnM').style['pointer-events'] = "auto";
 }
 
- if(document.getElementById('movechk').value == 1 ){
+ /* if(document.getElementById('movechk').value == 1 ){
 		/* counterscru = counterscru2;
 		//counterscru+= 0.2;
 		posCount = posCount2;
-		gwCount = gwCount2; */
+		gwCount = gwCount2; *
 		document.getElementById('rbtnP').style['pointer-events'] = "auto";
 		
 	} 
 	if(document.getElementById('rbtnM').style['pointer-events'] == "none"){
 	
 	document.getElementById('rbtnM').style['pointer-events'] = "auto";
-}
-	 
+} */
+document.getElementById('rbtnM').style['pointer-events'] = "auto";	 
  }
  
  function screw_widthdecr(){
@@ -472,7 +480,7 @@ if(newPos == 27 && document.getElementById('movechk').value == 1){
 	var newWirePos = math.subtract(wirePos,counterscru);
 	
 	
-	if(newPos == 4){
+	if(newPos == 10){
 	
 	alert('Exterem point');
 	document.getElementById('rbtnM').style['pointer-events'] = "none";
