@@ -69,6 +69,12 @@ document.getElementById('onewireT').style.visibility = "visible";
 //////animation for two-wire left side wire//////
 function wire1_transitionL(){
 document.getElementById('oneWire').classList.add('rotateWireR1');
+
+setTimeout(function(){
+document.getElementById('oneWire').style.display="none";
+	document.getElementById('oneWireH').style.display="block";
+ },2050);
+ 
 setTimeout(function(){	
 $('#oneWire2').css('visibility','visible');
 document.getElementById('oneWire2').src = "./images/sl2.png";	
@@ -121,7 +127,7 @@ $('#oneWire4').css('visibility','hidden');
 	
 }
 
-//////animation for three-wire//////
+//////animation for three-wire right side//////
 function wire2_transition(){
 document.getElementById('twoWire').classList.add('rotateWireR1');
 setTimeout(function(){	
@@ -177,6 +183,8 @@ if(sideCount == 1){
 	wire1_transitionL();
 	setTimeout(function(){	
 	document.getElementById('sideWire1').style.display = "block";
+	document.getElementById('oneWire').style.display = 'block';
+	document.getElementById('oneWireH').style.display = 'none';
 	 },3100);	
 }	
 if(sideCount == 2){
@@ -184,7 +192,8 @@ if(sideCount == 2){
 	setTimeout(function(){
 	document.getElementById('sideWire2').style.display = "block";
 	document.getElementById('sideWire2').src = "./images/onewireR3.png";
-	document.getElementById('oneWire').style.visibility = "hidden";
+	document.getElementById('oneWire').style.display = "none";
+	document.getElementById('oneWireH').style.display = "none";
 	document.getElementById('onewireT').style.visibility = "hidden";
 	 },1000);
 }	
@@ -196,7 +205,8 @@ else if(document.getElementById('seudobox').value == 2){///Three wire method
 	wire1_transitionL();
 	setTimeout(function(){
 	document.getElementById('sideWire1').style.display = "block";
-	document.getElementById('oneWire').style.visibility = "hidden";
+	document.getElementById('oneWire').style.display = "none";
+	document.getElementById('oneWireH').style.display = "none";
 	document.getElementById('onewireT').style.visibility = "hidden";
 	 },3100);
 	
@@ -599,7 +609,8 @@ function Refresh(){///donot keep the name of the function as clear
 document.getElementById('sideWire2').style.display = "none";
 
 sideCount = 0;
-document.getElementById('oneWire').style.visibility = "visible";
+document.getElementById('oneWire').style.display = "block";
+document.getElementById('oneWireH').style.display = "none";
 //document.getElementById('twoWire').style.visibility = "visible";
 document.getElementById('onewireT').style.visibility = "visible";
 document.getElementById('oneWire').classList.remove('rotateWireR1');
