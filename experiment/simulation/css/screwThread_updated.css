@@ -63,12 +63,21 @@ visibility:hidden;
 
 
 #oneWire{
-visibility:visible;
+display:block;
    /*  left: 74%;
     top: 87.5%;
     width: 18%; */
     z-index: 2;
     transform: rotate(349deg);
+}
+#oneWireH{
+display:none;
+   /*  left: 74%;
+    top: 87.5%;
+    width: 18%; */
+	width:35%;
+    z-index: 2;
+    /* transform: rotate(349deg); */
 }
 /*-----------------------------for one wire image rotation in 3d for two-wire method--------------------*/	
 .rotateWireR1{
