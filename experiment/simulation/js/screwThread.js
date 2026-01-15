@@ -66,37 +66,134 @@ document.getElementById('onewireT').style.visibility = "visible";
 
 }
 
+//////animation for 3D rotation of onewire//////
+ /* var OW_arr = [];///ANIM TYPE-4
+OW_arr[0]= new Image();
+OW_arr[0].src = "images/three.png";
+OW_arr[1]= new Image();
+OW_arr[1].src = "images/four.png";
+OW_arr[2]= new Image();
+OW_arr[2].src = "images/five.png";
+OW_arr[3]= new Image();
+OW_arr[3].src = "images/six.png";  */
+
+var OW_arr = [];///ANIM TYPE-5
+OW_arr[0]= new Image();
+OW_arr[0].src = "images/9.png";
+OW_arr[1]= new Image();
+OW_arr[1].src = "images/10.png";
+OW_arr[2]= new Image();
+OW_arr[2].src = "images/four.png";
+OW_arr[3]= new Image();
+OW_arr[3].src = "images/five.png"; 
+OW_arr[4] = new Image();
+OW_arr[4].src = "images/14.png";
+//OW_arr[5] = new Image();
+//OW_arr[5].src = "images/six.png";
+
+
+/* var OW_arr = [];///ANIM TYPE-1
+OW_arr[0] = new Image();
+OW_arr[0].src = "images/2.png";
+OW_arr[1] = new Image();
+OW_arr[1].src = "images/3.png";
+OW_arr[2] = new Image();
+OW_arr[2].src = "images/4.png";
+OW_arr[3] = new Image();
+OW_arr[3].src = "images/5.png";
+OW_arr[4] = new Image();
+OW_arr[4].src = "images/6.png";
+OW_arr[5] = new Image();
+OW_arr[5].src = "images/7.png";
+OW_arr[6] = new Image();
+OW_arr[6].src = "images/8.png";
+OW_arr[7] = new Image();
+OW_arr[7].src = "images/9.png";
+OW_arr[8] = new Image();
+OW_arr[8].src = "images/10.png";
+OW_arr[9] = new Image();
+OW_arr[9].src = "images/11.png";
+OW_arr[10] = new Image();
+OW_arr[10].src = "images/12.png";
+OW_arr[11] = new Image();
+OW_arr[11].src = "images/13.png";
+OW_arr[12] = new Image();
+OW_arr[12].src = "images/14.png"; */
+
+/* var OW_arr = [];///ANIM TYPE-2
+OW_arr[0] = new Image();
+OW_arr[0].src = "images/8.png";
+OW_arr[1] = new Image();
+OW_arr[1].src = "images/9.png";
+OW_arr[2] = new Image();
+OW_arr[2].src = "images/10.png";
+OW_arr[3] = new Image();
+OW_arr[3].src = "images/11.png";
+OW_arr[4] = new Image();
+OW_arr[4].src = "images/12.png";
+OW_arr[5] = new Image();
+OW_arr[5].src = "images/13.png";
+OW_arr[6] = new Image();
+OW_arr[6].src = "images/14.png"; */
+
+
+
+var imNo = 0;
+var wireTimer = null;
+
+function rotate_Wire_3D() {
+
+
+    document.getElementById("oneWire").src = OW_arr[imNo].src;
+    imNo++;
+
+    // ✅ STOP animation at last image
+    if (imNo >= OW_arr.length) {
+        clearTimeout(wireTimer);
+        return;
+    }
+
+    wireTimer = setTimeout(rotate_Wire_3D, 300);
+}
+
+
+
 //////animation for two-wire left side wire//////
 function wire1_transitionL(){
 document.getElementById('oneWire').classList.add('rotateWireR1');
-
 setTimeout(function(){
+document.getElementById("oneWire").classList.remove('rotateWireR1');
+document.getElementById("oneWire").src = "./images/oneWireR.png";
+document.getElementById("oneWire").style.width=70+"%";
+rotate_Wire_3D();
+ },2100);
+/* setTimeout(function(){
 document.getElementById('oneWire').style.display="none";
 	document.getElementById('oneWireH').style.display="block";
- },2050);
+ },2050); */
  
 setTimeout(function(){	
 $('#oneWire2').css('visibility','visible');
-document.getElementById('oneWire2').src = "./images/sl2.png";	
- },2200);	
+document.getElementById('oneWire2').src = "./images/six.png";	
+ },3500);	
  
  setTimeout(function(){	
 $('#oneWire3').css('visibility','visible');	
-document.getElementById('oneWire3').src = "./images/sl2.png";
+document.getElementById('oneWire3').src = "./images/six.png";
 $('#oneWire2').css('visibility','hidden');
- },2500);	
+ },3700);	
  
  setTimeout(function(){	
 $('#oneWire4').css('visibility','visible');
-document.getElementById('oneWire4').src = "./images/sl2.png";
+document.getElementById('oneWire4').src = "./images/six.png";
 $('#oneWire3').css('visibility','hidden');	
- },2800);
+ },3900);
 
 setTimeout(function(){	
 $('#oneWire2').css('visibility','hidden');	
 $('#oneWire3').css('visibility','hidden');
 $('#oneWire4').css('visibility','hidden');
- },3000);	 
+ },4100);	 
 	
 }
 //////animation for two-wire right side wire//////
@@ -184,8 +281,9 @@ if(sideCount == 1){
 	setTimeout(function(){	
 	document.getElementById('sideWire1').style.display = "block";
 	document.getElementById('oneWire').style.display = 'block';
-	document.getElementById('oneWireH').style.display = 'none';
-	 },3100);	
+	document.getElementById('oneWire').src = './images/onewireR.png';
+	document.getElementById('oneWire').style.width = 70 +"%";
+	 },4300);	
 }	
 if(sideCount == 2){
 	wire1_transitionR();
@@ -193,7 +291,7 @@ if(sideCount == 2){
 	document.getElementById('sideWire2').style.display = "block";
 	document.getElementById('sideWire2').src = "./images/onewireR3.png";
 	document.getElementById('oneWire').style.display = "none";
-	document.getElementById('oneWireH').style.display = "none";
+	//document.getElementById('oneWireH').style.display = "none";
 	document.getElementById('onewireT').style.visibility = "hidden";
 	 },1000);
 }	
@@ -206,9 +304,9 @@ else if(document.getElementById('seudobox').value == 2){///Three wire method
 	setTimeout(function(){
 	document.getElementById('sideWire1').style.display = "block";
 	document.getElementById('oneWire').style.display = "none";
-	document.getElementById('oneWireH').style.display = "none";
+	//document.getElementById('oneWireH').style.display = "none";
 	document.getElementById('onewireT').style.visibility = "hidden";
-	 },3100);
+	 },4300);
 	
 }
 
@@ -609,12 +707,15 @@ function Refresh(){///donot keep the name of the function as clear
 document.getElementById('sideWire2').style.display = "none";
 
 sideCount = 0;
+imNo=0;
 document.getElementById('oneWire').style.display = "block";
-document.getElementById('oneWireH').style.display = "none";
+document.getElementById('oneWire').src = "./images/oneWire.png";
+document.getElementById('oneWire').style.width = 100 +"%";
+//document.getElementById('oneWireH').style.display = "none";
 //document.getElementById('twoWire').style.visibility = "visible";
 document.getElementById('onewireT').style.visibility = "visible";
 document.getElementById('oneWire').classList.remove('rotateWireR1');
-document.getElementById('oneWire').style.transform = "rotate(340deg)";
+//document.getElementById('oneWire').style.transform = "rotate(340deg)";
 //document.getElementById('twowireT').style.visibility = "visible";
 document.getElementById('calcbtn').disabled = true;
 
@@ -635,7 +736,7 @@ if (document.getElementById('seudobox').value == 2){
 	document.getElementById('twoWire').style.visibility = "visible";
 	document.getElementById('twowireT').style.visibility = "visible";
 	document.getElementById('twoWire').classList.remove('rotateWireR1');
-	document.getElementById('twoWire').style.transform = "rotate(340deg)";
+	//document.getElementById('twoWire').style.transform = "rotate(340deg)";
 	$('#H').val(0);
 	$('#HT').css('visibility','visible');
 	$('#H').css('visibility','visible');
