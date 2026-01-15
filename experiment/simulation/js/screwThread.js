@@ -163,7 +163,7 @@ function wire1_transitionL(){
 document.getElementById('oneWire').classList.add('rotateWireR1');
 setTimeout(function(){
 document.getElementById("oneWire").classList.remove('rotateWireR1');
-document.getElementById("oneWire").src = "./images/oneWireR.png";
+document.getElementById("oneWire").src = "./images/onewireR.png";
 document.getElementById("oneWire").style.width=70+"%";
 rotate_Wire_3D();
  },2100);
@@ -709,7 +709,7 @@ document.getElementById('sideWire2').style.display = "none";
 sideCount = 0;
 imNo=0;
 document.getElementById('oneWire').style.display = "block";
-document.getElementById('oneWire').src = "./images/oneWire.png";
+document.getElementById('oneWire').src = "./images/onewire.png";
 document.getElementById('oneWire').style.width = 100 +"%";
 //document.getElementById('oneWireH').style.display = "none";
 //document.getElementById('twoWire').style.visibility = "visible";
