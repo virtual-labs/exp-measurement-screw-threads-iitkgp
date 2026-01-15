@@ -12,7 +12,7 @@ given dropdown. The value of pitch of thread <span style="font-family:'Bodoni MT
 <div align="center">
 <img class="img-fluid"  src="./images/simu.png" alt=""><br> 
 <b>Fig. 1. Measurement of Screw Threads Parameters Simulation interface</b> 
-</div> 					  				  
+</div><br/> 					  				  
 
 <li>Click on the one wire for two times to place the two wires on the measuring faces of micrometer spindle and anvil.</li><br/>
 
