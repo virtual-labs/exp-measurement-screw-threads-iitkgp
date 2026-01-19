@@ -1,0 +1,327 @@
+
+
+
+
+.img-container{	
+	position:relative;
+	display:inline-block;	
+}
+
+
+
+
+#screwThread{
+position: absolute;
+    top: -18%;
+    left: 90%;
+    z-index: 2;
+}
+#screwThread2{
+visibility: hidden;
+    position: absolute;
+    left: 28%;
+    top: 52.5%;
+    width: 30%;
+    z-index: -2;
+}
+#twz{
+	position: absolute;
+    display: none;
+    width: 188%;
+    left: -47%;
+    top: 68%;
+}
+#thwz{
+	position: absolute;
+    display: none;
+    width: 188%;
+    left: -47%;
+    top: 68%;
+}
+#twoWire{
+	position:absolute;
+visibility:hidden;
+    width:100%;
+	left: -20%;
+    top: 12%;
+    /*top: 88.5%;
+    width: 18%; */
+    z-index: 2;
+    /* transform: rotate(349deg);*/
+}
+
+#twoWire3{
+	    position: absolute;
+    visibility: hidden;
+    left: 32%;
+    top: 107.5%;
+    width: 42%;
+    z-index: 2;
+}
+#twoWire4{
+	position: absolute;
+    visibility: hidden;
+    left: 41%;
+    top: 88.5%;
+    width: 23%;
+    z-index: 2;
+}
+
+
+#oneWire{
+	position:absolute;
+display:block;
+    left: 82%;
+    top: 18%;
+    width: 100%; 
+    z-index: 2;
+	
+    /* transform: rotate(349deg); */
+}
+
+#tab1{
+	position:absolute;
+    left: -57%;
+    top: 37%;
+	z-index:-1;
+    /* width: 70%; */ 
+}
+#tab2{
+	position:absolute;
+    left: -5%;
+    top: 37%;
+	z-index:-1;
+    /* width: 70%; */ 
+}
+
+
+/*-----------------------------for one wire image rotation in 3d for two-wire method--------------------*/	
+.rotateWireR1{
+	animation:rotateWire 2s linear forwards;	
+}
+
+@keyframes rotateWire {
+  0% {
+    transform: rotate(340deg);
+	/*transform-origin:50% 20%;*/
+  }
+  10% {
+    transform: rotate(320deg);
+	/*transform-origin:50% 20%;*/
+  }
+  20% {
+    transform: rotate(300deg);
+	/*transform-origin:50% 20%;*/
+  }
+  30% {
+    transform: rotate(280deg);
+	/*transform-origin:50% 20%;*/
+  }
+  40% {
+    transform: rotate(260deg);
+	/*transform-origin:50% 20%;*/
+  }
+  50% {
+    transform: rotate(250deg);
+	/*transform-origin:50% 20%;*/
+  }
+  
+  70% {
+    transform: rotate(245deg);
+	/*transform-origin:50% 20%;*/
+  }
+  
+  100% {
+    transform: rotate(243deg);
+	/*transform-origin:50% 20%;*/
+	  }
+   /*from {left: 47.7%;}
+    to   {left: 46%;}*/
+}	
+
+
+
+
+#oneWire2{
+	position: absolute;
+    visibility: hidden;
+    left: 127%;
+    top: 94.5%;
+    width: 38%;
+    z-index: 2;
+}
+#oneWire3{
+	position: absolute;
+    visibility: hidden;
+    left: 73%;
+    top: 97.5%;
+    width: 30%;
+    z-index: 2;
+}
+#oneWire4{
+	position: absolute;
+    visibility: hidden;
+    left: 27%;
+    top: 100.5%;
+    width: 25%;
+    z-index: 2;
+}
+
+#sTtext{
+position: absolute;
+    top: 103.5%;
+    left: 68%;
+    width: 87%;
+    /* font-size: 1vw; */
+    color: white;
+}
+#twztext{
+display: none;
+position:absolute;
+top: 172.5%;
+    /* top: 123.5%; */
+    /* font-size: 1vw; */
+    color: blue;
+}
+#thwztext{
+	position:absolute;
+display: none;
+top: 199.5%;
+    /* top: 123.5%; */
+    /* font-size: 1vw; */
+    color: blue;
+}
+#twowireT{
+	position:absolute;
+visibility:hidden;
+     left: 3%;
+    top: 107.5%;
+    color: white;
+}
+
+#onewireT{
+position: absolute;
+    left: 124%;
+    width: 30%;
+    top: 106.5%;
+    color: white;
+}
+
+#sideWire1{
+width: 32%;
+    display: none;
+    position: absolute;
+    left: 13%;
+    top: 56.5%;
+    z-index: -2;
+}
+#sideWire2{
+width: 32%;
+    display: none;
+    position: absolute;
+    left: 42%;
+    top: 60.5%;
+    z-index: -3;
+}
+
+#rotategear{	
+position: absolute;
+    left: 70%;
+    top: 69.2%;
+}
+
+/*------index2.html-----*/
+
+#fmfixed{
+position: absolute;
+    width: 35%;
+    right: 52%;
+    top: 24.2%;
+    z-index: 1;
+}
+
+#fmls{
+position: absolute;
+width: 78%;
+height: 22%;
+right: -77%;
+top: 70.7%;
+z-index: 2;
+}
+#fmmv{
+position: absolute;
+    width: 11%;
+    height: 29%;
+    right: 24%;
+    top: 65.7%;
+    z-index: -4;
+}
+#g1{
+position: absolute;
+    /* width: 82%; */
+    /* height: 32%; */
+    right: -102.8%;
+    top: 34.8%;
+}
+#cscale{
+position: absolute;
+width: 82%;
+height: 32%;
+right: -93.8%;
+top: 64.8%;
+z-index: 4;
+}
+#ratchet{
+position: absolute;
+    width: 40%;
+    height: 26%;
+    right: -146%;
+    top: 66%;
+    z-index: 3;
+}
+#gatis{
+position: absolute;
+    width: 13%;
+    height: 32%;
+    right: -106%;
+    top: 64%;
+    z-index: 3;
+}
+/*-common part--*/
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}  
+tr:nth-child(odd) {
+  background-color: #F0FBCC;
+} 
+
+
+#scruthrd2{
+	position: absolute;
+    visibility: hidden;
+    left: -41%;
+    top: 98.5%;
+    width: 23%;
+    z-index: 2;
+}
+#scruthrd3{
+	position: absolute;
+    visibility: hidden;
+    left: -18%;
+    top: 84.5%;
+    width: 20%;
+    z-index: 2;
+}
+#scruthrd4{
+	position: absolute;
+    visibility: hidden;
+    left: 23%;
+    top: 89.5%;
+    width: 15%;
+    z-index: 2;
+}

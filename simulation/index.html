@@ -1,0 +1,370 @@
+<!-- This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.-->
+
+<!DOCTYPE html>
+<html lang="en"><!--html tag start-->
+<head>
+    <title>Measurement of Screw Threads Parameters using Two Wire or Three-Wire Methods</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+   
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script  src="./js/screwThread.js">   </script>
+  
+
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>-->
+
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.min.js  "></script>
+ 
+ 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+
+<link rel="stylesheet" href="./css/screwThread_updated.css">
+
+	
+
+
+  <style>
+	
+	
+	canvas {	
+	max-width:100%;
+	}
+	
+	
+  </style>
+  
+  
+  
+</head>
+<body><!--body tag start-->
+    <div class="container p-3 my-3 text-primary text-center "><!--First Container under body tag start-->
+       
+        <hr>
+        <div class="row"><!--2nd row under 1st container start-->
+            
+            <div class="col-md-12"><!--2nd col under 2nd row start-->
+                <p class="h1"> <b>Simulation</b> </p>
+            </div><!--2nd col under 2nd row end-->
+           
+        </div><!--2nd row under 1st container end-->
+        <hr>
+       
+    </div><!--First Container under body tag end-->
+    
+   
+	
+    <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
+      <div class="row"><!--First row under 3rd container start-->
+        <div class="col-md-1"></div><!--First col under 3rd container start& end-->
+        <div class="col-md-10"><!--2nd col under 3rd container start-->
+            <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
+              <div id="inst" style="display:none">
+			  <ol>
+                      
+					  <li> First click on 'Two-wire' under 'Experiment Parts'. Select 0.722 (standard diameter of wire) mm as the value of wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> from the
+					  given dropdown. The value of pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> is 1.25 mm.</li><br/>					  
+					  
+					  <li>Click on the one wire for two times to place the two wires on the measuring faces of micrometer spindle and anvil.</li><br/>
+					 
+					 <li>Click on the screw thread specimen to place it in between the two wires on the measuring faces of micrometer spindle and anvil.
+					 Click on the clockwise arrow sign on the 'Rotate Micrometer' button. Wait until the circular scale of the micrometer stops rotating. Again click on the same arrow key
+					 . Click it until the screw thread is properly fixed between the wires. After a ratchet wrench sound, one alert message will be shown when it is properly fixed. 
+					 </li></br>
+					 
+					 <li>Click on 'Calculate' button to find out the value of the effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)). Click on the anticlockwise arrow sign on the 'Rotate Micrometer' button to move the micrometer spindle from fixed position.</li><br/>
+
+					 <li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.
+					 Follow steps 2-4 by selecting 0.866 mm as the value of wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> from the given dropdown.
+					 The value of pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> is 1.5 mm.</li><br/>
+
+					 <li>Click on 'Clear' button.</li><br/>
+					 
+					 <li>Now click on 'Three-wire' under 'Experiment Parts'. Select 0.722 mm as the value of wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> from the
+					  given dropdown. The value of pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> is 1.25 mm.</li><br/>
+					  
+					  <li>Click on the one wire and two wire to place them on the measuring faces of micrometer spindle and anvil.</li><br/>
+						
+					<li>Follow steps 3-4 to measure the effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)), the distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span>
+					(mm) and the value of <span style="font-family:'Bodoni MT';font-style:italic">H</span> (height of the threads in mm). </li><br/>
+					
+					<li>Click on the screw thread specimen to place it back to its previous position. Click on 'Clear' button.
+					 Follow steps 8-10 by selecting 0.866 mm as the value of wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> from the
+					  given dropdown. The value of pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> is 1.5 mm. Click on 'Clear' button.</li><br/> 
+
+					 
+					<br/><br/>
+					</ol>
+					
+		   </div>
+            </p> 
+          </div><!--2nd col under 3rd container end-->
+		  
+        <div class="col-md-1"></div><!--3rd col under 3rd container start& end-->
+      </div><!--First row under 3rd container end-->
+    </div><!--3rd Container under body tag end-->
+	
+    <div class="container p-3 my-5 text-center border" id="canvas" ><!--Fourth container under body tag start-->
+	
+	<div class="row my-5 gy-2">
+	
+	<div class="col-md-2">	
+	<input type="number" id="seudobox" value="1" min="1" max="2" style="visibility:hidden">
+	
+	</div>
+	
+	<div class="col-md-8">	
+	
+	<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Experiment Parts
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" onclick="seudovalue1();two_wire()">Two-wire Method</a></li>
+    <li><a class="dropdown-item" onclick="seudovalue2();three_wire()">Three-wire Method</a></li>
+  </ul>
+</div>
+
+</div>
+
+
+	
+<div class="col-md-2"></div>	
+	
+	</div>
+	
+	<div class="row ">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+			<div class="card" style=" width:100%;background-color:pink" > 
+			
+			<div class="card-body">
+			<!-- <b class="card-title bg-light"> Measurement of the Effective Diameter <span style="font-family:'Bodoni MT';font-style:italic">E</span></b><br/><br/>
+ -->
+			<span class="card-text" style="position:absolute;left:20%" >Choose the wire diameter <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">d</span> (mm):</span>&nbsp;
+			<select class="card-text" id="d" style="position:absolute;left:66%;width:15%;text-align:center" onclick="pValueChange(this)">
+			  <option >0.722</option>
+			  <option >0.866</option>
+			</select>			
+			<br/><br/>
+
+
+			<span class="card-text" style="position:absolute;left:20%">The pitch of thread <span style="font-family:'Bodoni MT';font-style:italic;font-size:20px">p</span> (mm):</span>&nbsp;
+			<input id="p" style="position:absolute;left:66%;width:15%;text-align:center" value="1.25" readonly=readonly>
+			<!-- <select class="card-text" id="p" style="width:10%;text-align:center">
+			  <option>1.25</option>
+			  <option>1.5</option>
+			</select> -->			
+			<br/><br/>
+
+
+			
+			<!-- <span class="card-text" style="position:absolute;left:20%">The distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span> (mm):</span>&nbsp;
+			<input id="M" style="position:absolute;left:66%;width:15%;text-align:center" value="0" readonly=readonly>
+			<!-- <select class="card-text" id="M" style="width:10%;text-align:center">
+			  <option>25.08</option>
+			  <option>26.58</option>
+			</select> --			
+			<br/><br/>
+						
+			<span class="card-text" style="position:absolute;left:20%">The effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)):</span>&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
+			<span class="card-text" id="HT" style="visibility:hidden;position:absolute;left:20%">Height of the threads (<span style="font-family:'Bodoni MT';font-style:italic">H</span> (mm)):</span>&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="visibility:hidden;position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
+			 -->
+			<button  type="button"   id="calcbtn" class="btn btn-success " onclick="calculate()" disabled="true">Calculate</button>
+			<button  type="button" class="btn btn-danger " onclick="Refresh()" >Clear</button>
+			</div></div></div>
+			
+			<div class="col-md-1">
+			<audio id="myAudio">
+			  <source src="Ratchet Wrench - Sound Effect.mp3" type="audio/mpeg">
+			</audio>
+			
+			
+			</div>
+			
+			</div>
+			
+			
+			<div class="row my-5">
+			<div class="col-md-12">
+			<div   class="img-container">
+			
+			<img  src="./images/fmfixed2.png">
+			
+					
+			<button type="button" id="g1"  class="btn btn-success " >
+			 <b id="rbtnP" onclick="rotategauge();cscalePosChng();screw_widthincr()" style="color:white;pointer-events:auto">&circlearrowright;</b>&nbsp;Rotate Micrometer&nbsp;<b id="rbtnM" onclick="rotategaugerev();cscalePosChngRev();screw_widthdecr()" style="color:white;pointer-events:auto">&circlearrowleft;</b>
+			</button>
+	
+			<img id="fmls" src="./images/fmls.png" onclick="">	
+			<img id="fmmv" src="./images/fmmove.png" onclick="">	
+			 <img id="cscale" src="./images/fm1.png" >
+			<img id="ratchet" src="./images/ratchet.png" > 
+			<img id="gatis" src="./images/mjvprt.png" >
+			
+			<img id="screwThread2" src="./images/screwthread.png" onclick="moveThread()" >
+			<img id="sideWire1" src="./images/sl22.png" onclick = "">
+			<img id="sideWire2" src="./images/onewireR3.png" onclick = "">
+			
+			<img id="oneWire4" src="./images/six.png">
+			<img id="oneWire3" src="./images/six.png">
+			<img id="oneWire2" src="./images/onewireR.png">
+			
+			<img id="twoWire4" src="./images/twowireR.png">
+			<img id="twoWire3" src="./images/twowireR.png">
+			
+			<img id="scruthrd2" src="./images/screwthread.png">
+			<img id="scruthrd3" src="./images/screwthread.png">
+			<img id="scruthrd4" src="./images/screwthread.png">
+			
+			</div>	
+			<input type="number" id="movechk" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
+			
+	</div>
+	
+	<!--<button class="btn btn-success" onclick="Dw_Tester()">Simulate</button>-->
+	</div>
+	
+	
+	 <div class="row"><!--- 2nd row under fourth container start--->		
+		
+			<div class="col-md-4 "><!--2nd col under 2nd row start -->
+			<div class="img-container">
+			<img  src="./images/fmfixed2.png" style="visibility:hidden">
+			<img id="screwThread" src="./images/screwthread.png" onclick="moveThread()" >
+			<p id = "sTtext">Screw thread specimen</p>
+			<!-- <img id="twz" src="./images/twz.png" >
+			<p id = "twztext">Cross section of Screw thread specimen for Two wire method</p>
+			<img id="thwz" src="./images/thwz.png" >			
+			<p id = "thwztext">Cross section of Screw thread specimen for Three wire method</p> -->
+			<img id="tab2" src="./images/tableR.png">
+			</div></div>
+			
+			<div class="col-md-8 ">
+			<div class="img-container">
+			<img  src="./images/fmfixed2.png" style="visibility:hidden">
+			<img id="twoWire" src="./images/twowire.png" onclick = "side2()">
+			<p id = "twowireT">Two Wire</p>
+			
+			<img id="oneWire" src="./images/onewire.png" onclick = "side1()">
+			<p id = "onewireT">One Wire</p>
+			<img id="tab1" src="./images/tableR.png">
+			</div>
+			</div>
+			
+			<!-- <div class="col-md-10">
+	<div class="card" style=" width:100%;background-color:pink" > 		
+	<div class="card-body">
+			<b class="card-title bg-light"> Measurement of the Effective Diameter <span style="font-family:'Bodoni MT';font-style:italic">E</span></b><br/><br/>
+			
+			<span class="card-text" style="position:absolute;left:20%">The distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span> (mm):</span>&nbsp;
+			<input id="M" style="position:absolute;left:66%;width:15%;text-align:center" value="0" readonly=readonly>
+			<!-- <select class="card-text" id="M" style="width:10%;text-align:center">
+			  <option>25.08</option>
+			  <option>26.58</option>
+			</select> --			
+			<br/><br/>
+						
+			<span class="card-text" style="position:absolute;left:20%">The effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)):</span>&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
+			<span class="card-text" id="HT" style="visibility:hidden;position:absolute;left:20%">Height of the threads (<span style="font-family:'Bodoni MT';font-style:italic">H</span> (mm)):</span>&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="visibility:hidden;position:absolute;left:66%;width:15%;text-align:center"><br/><br/>
+			
+	</div>
+	</div>
+	</div> -->
+	
+		</div> 
+		
+		 <div class="row"><!--- 2nd row under fourth container start--->		
+		
+			<div class="col-md-12 "><!--2nd col under 2nd row start -->
+			<div class="img-container">
+			<img  src="./images/fmfixed2.png" style="visibility:hidden">
+			<img id="twz" src="./images/twz.png" >
+			<p id = "twztext">Cross section of Screw thread specimen for Two wire method</p>
+			<img id="thwz" src="./images/thwz.png" >			
+			<p id = "thwztext">Cross section of Screw thread specimen for Three wire method</p>
+			</div></div>
+			</div>
+		
+		
+		<div class="row my-5">
+			<div class="col-md-12">
+			<div   class="img-container" style="visibility:hidden">
+			
+			<img  src="./images/fmfixed2.png">
+			</div></div></div>
+		
+		 <div class="row">	
+		<div class="col-md-1"></div>
+			<div class="col-md-10 ">
+	<div class="card" style=" width:100%;background-color:pink" >		
+	<div class="card-body">
+			<b class="card-title bg-light"> Measurement of the Effective Diameter <span style="font-family:'Bodoni MT';font-style:italic">E</span></b><br/><br/>
+			
+			<span class="card-text" style="position:absolute;left:20%">The distance between the outer surfaces of the two wires <span style="font-family:'Bodoni MT';font-style:italic">M</span> (mm):</span>&nbsp;
+			<input id="M" style="position:absolute;left:72%;width:15%;text-align:center" value="0" readonly=readonly>
+			<!-- <select class="card-text" id="M" style="width:10%;text-align:center">
+			  <option>25.08</option>
+			  <option>26.58</option>
+			</select> -->			
+			<br/><br/>
+						
+			<span class="card-text" style="position:absolute;left:20%">The effective diameter (<span style="font-family:'Bodoni MT';font-style:italic">E</span> (mm)):</span>&nbsp;<input type="number" id="E" value="0" readonly=readonly  style="position:absolute;left:72%;width:15%;text-align:center"><br/><br/>
+			<span class="card-text" id="HT" style="visibility:hidden;position:absolute;left:20%">Height of the threads (<span style="font-family:'Bodoni MT';font-style:italic">H</span> (mm)):</span>&nbsp;<input type="number" id="H" value="0" readonly=readonly  style="visibility:hidden;position:absolute;left:72%;width:15%;text-align:center"><br/><br/>
+			
+
+	</div>
+	</div>
+	
+	</div> 
+	<div class="col-md-1"></div>
+	
+          <!-- Code End here-->
+        </div><!--Fourth container under body tag end-->
+          
+      <!--</div>--->
+    </div>
+
+    <div class="container p-3 my-5 text-primary text-center border"><!--Last and fifth container under body tag start-->
+      <div class="row">
+        <footer>
+          <div class="row ce">
+            <div class="col-sm-12">
+              <p class="h5"><i> Copyright ©2022 <a href="http://vlabs.iitkgp.ac.in/vlt/">Virtual Labs IIT Kharagpur</a> </i><br><br>
+              <a href="../../license/index.html" target="_blank"> Licensing Terms </a>
+            </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+  </div><!--Last and fifth container under body tag end-->
+  
+  
+
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body><!--body tag end-->
+
+ 
+</html><!--html tag end-->

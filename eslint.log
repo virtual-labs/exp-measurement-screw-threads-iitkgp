@@ -1,0 +1,188 @@
+
+/home/runner/work/exp-measurement-screw-threads-iitkgp/exp-measurement-screw-threads-iitkgp/experiment/simulation/js/screwThread.js
+    8:1   warning  '$' is not defined                                 no-undef
+    9:3   warning  '$' is not defined                                 no-undef
+   10:5   warning  '$' is not defined                                 no-undef
+   29:10  warning  'seudovalue1' is defined but never used            no-unused-vars
+   31:1   warning  '$' is not defined                                 no-undef
+   32:1   warning  '$' is not defined                                 no-undef
+   33:1   warning  '$' is not defined                                 no-undef
+   36:10  warning  'seudovalue2' is defined but never used            no-unused-vars
+   38:1   warning  '$' is not defined                                 no-undef
+   39:1   warning  '$' is not defined                                 no-undef
+   40:1   warning  '$' is not defined                                 no-undef
+   45:10  warning  'two_wire' is defined but never used               no-unused-vars
+   57:10  warning  'three_wire' is defined but never used             no-unused-vars
+  176:1   warning  '$' is not defined                                 no-undef
+  181:1   warning  '$' is not defined                                 no-undef
+  183:1   warning  '$' is not defined                                 no-undef
+  187:1   warning  '$' is not defined                                 no-undef
+  189:1   warning  '$' is not defined                                 no-undef
+  193:1   warning  '$' is not defined                                 no-undef
+  194:1   warning  '$' is not defined                                 no-undef
+  195:1   warning  '$' is not defined                                 no-undef
+  203:1   warning  '$' is not defined                                 no-undef
+  208:1   warning  '$' is not defined                                 no-undef
+  210:1   warning  '$' is not defined                                 no-undef
+  214:1   warning  '$' is not defined                                 no-undef
+  216:1   warning  '$' is not defined                                 no-undef
+  220:1   warning  '$' is not defined                                 no-undef
+  221:1   warning  '$' is not defined                                 no-undef
+  222:1   warning  '$' is not defined                                 no-undef
+  231:1   warning  '$' is not defined                                 no-undef
+  232:1   warning  '$' is not defined                                 no-undef
+  236:1   warning  '$' is not defined                                 no-undef
+  237:1   warning  '$' is not defined                                 no-undef
+  241:1   warning  '$' is not defined                                 no-undef
+  242:1   warning  '$' is not defined                                 no-undef
+  243:1   warning  '$' is not defined                                 no-undef
+  252:1   warning  '$' is not defined                                 no-undef
+  253:1   warning  '$' is not defined                                 no-undef
+  257:1   warning  '$' is not defined                                 no-undef
+  258:1   warning  '$' is not defined                                 no-undef
+  262:1   warning  '$' is not defined                                 no-undef
+  263:1   warning  '$' is not defined                                 no-undef
+  267:1   warning  '$' is not defined                                 no-undef
+  274:10  warning  'side1' is defined but never used                  no-unused-vars
+  286:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  296:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  309:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  315:10  warning  'side2' is defined but never used                  no-unused-vars
+  331:10  warning  'moveThread' is defined but never used             no-unused-vars
+  359:13  warning  't' is assigned a value but never used             no-unused-vars
+  364:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  367:2   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  378:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  381:2   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  439:10  warning  'rotategauge' is defined but never used            no-unused-vars
+  455:10  warning  'rotategaugerev' is defined but never used         no-unused-vars
+  479:10  warning  'cscalePosChng' is defined but never used          no-unused-vars
+  487:14  warning  'math' is not defined                              no-undef
+  488:13  warning  'math' is not defined                              no-undef
+  496:10  warning  'cscalePosChngRev' is defined but never used       no-unused-vars
+  506:14  warning  'math' is not defined                              no-undef
+  507:13  warning  'math' is not defined                              no-undef
+  520:22  warning  'counterscru2' is assigned a value but never used  no-unused-vars
+  521:11  warning  'screw_widthincr' is defined but never used        no-unused-vars
+  522:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  527:15  warning  'math' is not defined                              no-undef
+  528:19  warning  'math' is not defined                              no-undef
+  538:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  581:11  warning  'screw_widthdecr' is defined but never used        no-unused-vars
+  587:15  warning  'math' is not defined                              no-undef
+  588:19  warning  'math' is not defined                              no-undef
+  604:11  warning  'pValueChange' is defined but never used           no-unused-vars
+  604:24  warning  'select' is defined but never used                 no-unused-vars
+  605:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  606:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  607:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  608:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  609:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  610:2   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  610:4   warning  '$' is not defined                                 no-undef
+  611:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  612:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  614:2   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  615:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  622:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  623:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  623:11  warning  '$' is not defined                                 no-undef
+  624:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  625:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  626:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  627:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  628:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  629:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  630:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  630:7   warning  'p' is already defined                             no-redeclare
+  631:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  632:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  633:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  634:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  635:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  637:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  638:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  638:11  warning  'math' is not defined                              no-undef
+  638:27  warning  'math' is not defined                              no-undef
+  639:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  639:14  warning  'math' is not defined                              no-undef
+  640:16  warning  'math' is not defined                              no-undef
+  640:25  warning  'math' is not defined                              no-undef
+  640:39  warning  'math' is not defined                              no-undef
+  640:60  warning  'math' is not defined                              no-undef
+  640:72  warning  'math' is not defined                              no-undef
+  641:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  641:15  warning  'math' is not defined                              no-undef
+  642:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  643:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  643:13  warning  'math' is not defined                              no-undef
+  643:27  warning  'math' is not defined                              no-undef
+  643:36  warning  'math' is not defined                              no-undef
+  643:50  warning  'math' is not defined                              no-undef
+  643:71  warning  'math' is not defined                              no-undef
+  643:83  warning  'math' is not defined                              no-undef
+  644:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  644:15  warning  'math' is not defined                              no-undef
+  645:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  646:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  647:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  647:18  warning  'math' is not defined                              no-undef
+  648:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  655:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  655:7   warning  'math' is not defined                              no-undef
+  662:2   warning  '$' is not defined                                 no-undef
+  663:2   warning  '$' is not defined                                 no-undef
+  669:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  670:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  670:12  warning  '$' is not defined                                 no-undef
+  671:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  672:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  673:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  674:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  675:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  676:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  677:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  677:7   warning  'p' is already defined                             no-redeclare
+  678:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  679:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  680:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  681:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  682:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  682:11  warning  'math' is not defined                              no-undef
+  682:25  warning  'math' is not defined                              no-undef
+  682:42  warning  'math' is not defined                              no-undef
+  682:51  warning  'math' is not defined                              no-undef
+  682:65  warning  'math' is not defined                              no-undef
+  682:86  warning  'math' is not defined                              no-undef
+  682:98  warning  'math' is not defined                              no-undef
+  683:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  684:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  686:11  warning  'math' is not defined                              no-undef
+  686:27  warning  'math' is not defined                              no-undef
+  686:38  warning  'math' is not defined                              no-undef
+  686:47  warning  'math' is not defined                              no-undef
+  686:61  warning  'math' is not defined                              no-undef
+  686:82  warning  'math' is not defined                              no-undef
+  686:94  warning  'math' is not defined                              no-undef
+  689:10  warning  'math' is not defined                              no-undef
+  689:27  warning  'math' is not defined                              no-undef
+  690:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  695:2   warning  '$' is not defined                                 no-undef
+  696:2   warning  '$' is not defined                                 no-undef
+  697:2   warning  '$' is not defined                                 no-undef
+  704:10  warning  'Refresh' is defined but never used                no-unused-vars
+  728:2   warning  '$' is not defined                                 no-undef
+  729:2   warning  '$' is not defined                                 no-undef
+  730:2   warning  '$' is not defined                                 no-undef
+  740:2   warning  '$' is not defined                                 no-undef
+  741:2   warning  '$' is not defined                                 no-undef
+  742:2   warning  '$' is not defined                                 no-undef
+  755:10  warning  'calculate' is defined but never used              no-unused-vars
+  758:2   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  759:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  760:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  761:2   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+  762:1   warning  Mixed spaces and tabs                              no-mixed-spaces-and-tabs
+
+✖ 183 problems (0 errors, 183 warnings)
+
