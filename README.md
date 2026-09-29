@@ -1,24 +1,17 @@
 ## Introduction
 
+<div align="center">
+<img src="experiment/images/iitkgp.png" width="10%">
+</div>
 
-<b>Discipline | <b>Fill your discipline name here
+<b>Discipline | <b> Mechanical Engineering 
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> ** Metrology and Measurement Laboratory**
+<b> Experiment|     <b> **Measurement of Screw Threads Parameters using Two-Wire or Three-Wire Methods and Experiment 7**
 
-### About the Experiment 
 
-Fill a brief description of this experiment here
+### About the Experiment
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
-:--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+Screw threads are commonly used in mechanical assemblies to provide secure connections and transmit force. Accurate measurement of their key parameters, including major diameter, is crucial for ensuring proper functioning and quality control.
 
-### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
-:--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
